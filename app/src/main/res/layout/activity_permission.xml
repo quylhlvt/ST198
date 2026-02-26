@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_bg_splash">
+        <FrameLayout
+            android:elevation="2dp"
+            android:layout_marginBottom="-30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/contrain"
+            app:layout_constraintEnd_toEndOf="@+id/contrain"
+            app:layout_constraintStart_toStartOf="@+id/contrain">
+
+            <include android:id="@+id/action_bar" layout="@layout/actionbar_custom" />
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contrain"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="82dp"
+            android:background="@drawable/bg_20_stroker_color_pink"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="3.44:4.54"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imv"
+                android:layout_marginTop="46dp"
+                android:layout_marginHorizontal="90dp"
+                android:layout_width="0dp"
+                app:layout_constraintDimensionRatio="1.64:1.8"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_per"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_permission_txt"
+                app:layout_constraintTop_toTopOf="@+id/tvTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imv" />
+
+            <ScrollView
+                android:id="@+id/sv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/bg_permission_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rl3">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/cherry_bomb_regular"
+                            android:gravity="center"
+                            android:text="@string/storage"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/swiVibrate2"
+                            android:layout_width="40dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/switch_off" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl4"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_permission_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rl3">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/cherry_bomb_regular"
+                            android:gravity="center"
+                            android:text="@string/notifications"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/swiVibrate4"
+                            android:layout_width="40dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/switch_off" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/btnContinue"
+            style="@style/single_marquee"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/cherry_bomb_regular"
+            android:freezesText="true"
+            android:gravity="end"
+            android:layout_width="wrap_content"
+            android:paddingVertical="10dp"
+            android:layout_marginEnd="16dp"
+            android:singleLine="true"
+            android:text="@string/continue2"
+            android:textColor="@color/app_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contrain"
+            app:outerStrokeColor="@color/app_color2"
+            app:outerStrokeJoinStyle="miter"
+            app:outerStrokeWidth="2dp" />
+<!--        <FrameLayout-->
+<!--            android:id="@+id/native_ads"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--            <include layout="@layout/ads_native_big_btn_top_shimmer" />-->
+<!--        </FrameLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
