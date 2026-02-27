@@ -39,22 +39,30 @@ class QuickAdapter(private val activity: Activity) : AbsBaseAdapter<CustomModel,
         val currentTag = binding.imvImage.tag as? Int
 
         if (bitmap != null) {
-            // ✅ Có bitmap rồi
             binding.shimmer.stopShimmer()
             binding.shimmer.hide()
 
-            // ✅ Chỉ load lại nếu position khác hoặc image đang trống
             if (currentTag != position || binding.imvImage.drawable == null) {
                 binding.imvImage.tag = position
-                Glide.with(binding.root.context)
-                    .load(bitmap)
-                    .encodeQuality(40)
-                    .override(256)
-                    .dontTransform()
-                    .diskCacheStrategy(DiskCacheStrategy.NONE)
-                    .into(binding.imvImage)
+
+                binding.imvImage.post {
+                    val fixedHeight = binding.imvImage.height.takeIf { it > 0 }
+                        ?: binding.root.height  // fallback về height của root
+
+                    val aspectRatio = bitmap.width.toFloat() / bitmap.height.toFloat()
+                    val params = binding.imvImage.layoutParams
+                    params.height = fixedHeight
+                    params.width = (fixedHeight * aspectRatio).toInt()
+                    binding.imvImage.layoutParams = params
+
+                    Glide.with(binding.root.context)
+                        .load(bitmap)
+                        .dontTransform()
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .into(binding.imvImage)
+                }
             }
-        } else {
+        }else {
             // ✅ Chưa có bitmap
             // Chỉ hiển thị shimmer nếu position thay đổi hoặc shimmer đang ẩn
             if (currentTag != position) {

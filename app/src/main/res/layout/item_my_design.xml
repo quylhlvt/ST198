@@ -10,11 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <ImageView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/imgstroker"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            app:strokeColor="@color/app_color4"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -23,18 +26,17 @@
             android:adjustViewBounds="true"
             android:elevation="1dp"/>
 
-
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="16dp"
             app:cardBackgroundColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imgstroker"
             app:layout_constraintEnd_toEndOf="@+id/imgstroker"
-            android:layout_margin="3dp"
+            android:layout_margin="2dp"
             app:layout_constraintStart_toStartOf="@+id/imgstroker"
             app:layout_constraintTop_toTopOf="@+id/imgstroker"
-            app:strokeColor="@color/app_color2"
+            app:strokeColor="@color/app_color5"
             app:strokeWidth="2dp">
 
         <!--            imvImage-->

@@ -110,7 +110,7 @@ class QuickMixActivity : AbsBaseActivity<ActivityQuickMixBinding>() {
     }
 
     override fun initView() {
-        binding.titleQuick.isSelected = true
+//        binding.titleQuick.isSelected = true
         registerNetworkReceiver()
         isNetworkAvailable = isInternetAvailable(this@QuickMixActivity)
         isOfflineMode = !isNetworkAvailable
@@ -247,12 +247,16 @@ class QuickMixActivity : AbsBaseActivity<ActivityQuickMixBinding>() {
                 val pair = if (x != null) {
                     val path = x.listPath[0].listPath
                     val color = x.listPath
+
+                    val pathLimit = (path.size / 3).coerceAtLeast(2) // tối thiểu 2 để có cái random
+                    val colorLimit = (color.size / 3).coerceAtLeast(1)
+
                     val randomValue = if (path[0] == "none") {
-                        if (path.size > 3) (2 until path.size).random() else 2
+                        if (pathLimit > 2) (2 until pathLimit).random() else 2
                     } else {
-                        if (path.size > 2) (1 until path.size).random() else 1
+                        if (pathLimit > 1) (1 until pathLimit).random() else 1
                     }
-                    val randomColor = (0 until color.size).random()
+                    val randomColor = (0 until colorLimit).random()
                     arrayListOf(randomValue, randomColor)
                 } else {
                     arrayListOf(-1, -1)
@@ -515,29 +519,17 @@ class QuickMixActivity : AbsBaseActivity<ActivityQuickMixBinding>() {
         height: Int
     ): Bitmap? = withContext(bitmapDispatcher) {
         try {
-            if (blackCentered.checkDataOnline && isOfflineMode) {
-                return@withContext null
-            }
-
-            val merged = Glide.get(this@QuickMixActivity).bitmapPool
-                .get(width, height, Bitmap.Config.ARGB_8888)
-
-            val canvas = Canvas(merged)
-            val dstRect = RectF(0f, 0f, width.toFloat(), height.toFloat())
+            if (blackCentered.checkDataOnline && isOfflineMode) return@withContext null
 
             val layers = listImageSortView.mapIndexed { index, icon ->
                 async(Dispatchers.IO) {
-                    if (blackCentered.checkDataOnline && isOfflineMode) {
-                        return@async null
-                    }
-
+                    if (blackCentered.checkDataOnline && isOfflineMode) return@async null
                     val coord = coordSet[index]
                     if (coord[0] > 0) {
                         val targetPath = blackCentered.bodyPart
                             .find { it.icon == icon }
                             ?.listPath?.getOrNull(coord[1])
                             ?.listPath?.getOrNull(coord[0])
-
                         if (!targetPath.isNullOrEmpty()) {
                             loadSingleBitmap(targetPath, width, height, blackCentered.checkDataOnline)
                         } else null
@@ -545,9 +537,24 @@ class QuickMixActivity : AbsBaseActivity<ActivityQuickMixBinding>() {
                 }
             }.awaitAll().filterNotNull()
 
+            if (layers.isEmpty()) return@withContext null
+
+            // ✅ Dùng kích thước của layer đầu tiên làm chuẩn (thay vì width/height cố định)
+            val baseWidth = layers[0].width
+            val baseHeight = layers[0].height
+
+            val merged = Bitmap.createBitmap(baseWidth, baseHeight, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(merged)
+
             layers.forEach { bmp ->
-                val srcRect = Rect(0, 0, bmp.width, bmp.height)
-                canvas.drawBitmap(bmp, srcRect, dstRect, null)
+                // ✅ Scale về baseWidth/baseHeight giữ đúng tỉ lệ
+                if (bmp.width == baseWidth && bmp.height == baseHeight) {
+                    canvas.drawBitmap(bmp, 0f, 0f, null)
+                } else {
+                    val src = Rect(0, 0, bmp.width/2, bmp.height/2)
+                    val dst = Rect(0, 0, baseWidth/2, baseHeight/2)
+                    canvas.drawBitmap(bmp, src, dst, null)
+                }
             }
 
             merged
