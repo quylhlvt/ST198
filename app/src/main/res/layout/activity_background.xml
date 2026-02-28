@@ -11,36 +11,68 @@
         <View
             android:id="@+id/guideline_vertical"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="320dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/navBottom" />
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
             android:src="@drawable/img_bg_splash"
             app:layout_constraintTop_toTopOf="parent" />
-        <androidx.appcompat.widget.AppCompatImageView
+        <FrameLayout
             android:id="@+id/imvBack"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="60dp"
             android:elevation="2dp"
-            android:src="@drawable/ic_back_app"
-            android:layout_marginStart="20dp"
+            app:layout_constraintDimensionRatio="0.8:0.44"
+            android:background="@drawable/ic_back_app"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <androidx.appcompat.widget.AppCompatImageView
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:ellipsize="marquee"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                style="@style/single_marquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </FrameLayout>
+        <FrameLayout
             android:id="@+id/btnSave"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            android:elevation="1dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_save"
-            android:adjustViewBounds="true"
-            app:layout_constraintBottom_toBottomOf="@id/imvBack"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="60dp"
+            android:elevation="2dp"
+            app:layout_constraintDimensionRatio="0.8:0.44"
+            android:background="@drawable/ic_back_app"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imvBack" />
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:ellipsize="marquee"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                style="@style/single_marquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </FrameLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/llTop"
             android:layout_width="0dp"
@@ -56,8 +88,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnReset"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
                 android:src="@drawable/ic_reset"
 
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,24 +99,24 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="fitXY"
-            app:layout_constraintTop_toTopOf="@+id/drawView"
-            app:layout_constraintEnd_toEndOf="@+id/drawView"
-            app:layout_constraintBottom_toBottomOf="@+id/drawView"
-            app:layout_constraintStart_toStartOf="@+id/drawView"
-            />
+<!--        <ImageView-->
+<!--            android:id="@+id/imvBackground1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/drawView"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/drawView"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/drawView"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/drawView"-->
+<!--            />-->
 
 
         <com.avatar.ocmaker.profile.custom.DrawView
             android:id="@+id/drawView"
-            android:layout_marginTop="10dp"
+            android:layout_marginVertical="8dp"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layerType="hardware"
-            android:layout_marginBottom="60dp"
             android:layout_marginHorizontal="6dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,71 +128,80 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop" />
+            <ImageView
+                android:id="@+id/imvBackground1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
         </com.avatar.ocmaker.profile.custom.DrawView>
         <ImageView
+            android:elevation="2dp"
             android:id="@+id/navBottom"
             android:layout_width="0dp"
-            android:layout_height="42dp"
+            android:layout_height="64dp"
             android:gravity="center"
             android:scaleType="fitXY"
             android:src="@drawable/bg_nav_bg"
-            app:layout_constraintBottom_toBottomOf="@+id/llBottom"
-            app:layout_constraintDimensionRatio="227:42"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/llBottom" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
         <LinearLayout
+            android:elevation="2dp"
             android:id="@+id/llBottom"
             android:layout_width="0dp"
-            android:layout_height="56dp"
+            android:layout_height="48dp"
             android:gravity="center"
-            android:paddingHorizontal="15dp"
-            app:layout_constraintDimensionRatio="227:56"
+            android:paddingHorizontal="60dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@id/ctl">
+            app:layout_constraintTop_toTopOf="@+id/navBottom"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-<!--            <androidx.appcompat.widget.AppCompatImageView-->
-<!--                android:id="@+id/btnBg"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/imv_bg_true" />-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBg"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/imv_bg_true" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnItem"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:src="@drawable/imv_item_true" />
+                android:src="@drawable/imv_item" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnBgText"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:src="@drawable/imv_bg_text" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnText"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:src="@drawable/imv_text" />
         </LinearLayout>
 
         <LinearLayout
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="0dp"
-            android:layout_height="38dp"
-            android:layout_marginBottom="-18dp"
-            android:weightSum="259"
+            android:elevation="1dp"
+            android:layout_height="32dp"
+            android:weightSum="264"
             android:id="@+id/linearbg"
+            android:layout_marginTop="-3dp"
             android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@id/ctl"
-            app:layout_constraintDimensionRatio="2.59:0.38"
+
+            app:layout_constraintTop_toTopOf="@id/ctl"
+            app:layout_constraintDimensionRatio="2.64:0.32"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
@@ -168,8 +209,8 @@
                 android:layout_gravity="center"
                 android:id="@+id/btnImage"
                 android:layout_width="0dp"
-                android:layout_weight="121"
-                android:layout_height="38dp"
+                android:layout_weight="124"
+                android:layout_height="32dp"
                 android:background="@drawable/img_select"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -182,21 +223,21 @@
                     android:gravity="center"
                     style="@style/single_marquee"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     app:strokeJoinStyle="miter"
-                    android:fontFamily="@font/bubblegum_sans_regular"
+                    android:fontFamily="@font/cherry_bomb_regular"
                     />
             </FrameLayout>
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="17"/>
+            android:layout_weight="16"/>
             <FrameLayout
                 android:layout_gravity="center"
                 android:id="@+id/btnColor"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
-                android:layout_weight="121"
+                android:layout_height="32dp"
+                android:layout_weight="124"
                 android:background="@drawable/img_unselect"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -204,10 +245,10 @@
                 <TextView
                     android:id="@+id/txtColor"
                     style="@style/single_marquee"
-                    android:textColor="@color/app_color3"
-                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
                     app:strokeJoinStyle="miter"
-                    android:fontFamily="@font/bubblegum_sans_regular"
+                    android:fontFamily="@font/cherry_bomb_regular"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/color"
@@ -217,27 +258,27 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ctl"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:layout_height="320dp"
+            app:layout_constraintBottom_toTopOf="@+id/navBottom">
 
-<!--            <LinearLayout-->
-<!--                android:layout_marginTop="30dp"-->
-<!--                android:id="@+id/llBG"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent">-->
-<!--                <include-->
-<!--                    android:id="@+id/iclBg"-->
-<!--                    layout="@layout/layout_bg"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:visibility="visible" />-->
-<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:id="@+id/llBG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include
+                    android:id="@+id/iclBg"
+                    layout="@layout/layout_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/llStiker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <include
                     android:id="@+id/iclStiker"

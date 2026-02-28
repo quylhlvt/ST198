@@ -142,55 +142,67 @@
             android:id="@+id/rl"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="10dp"
             android:elevation="0dp"
             android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/img_bg_color"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnSave">
         </RelativeLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnDice"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            android:elevation="1dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/imv_random"
-            app:layout_constraintBottom_toBottomOf="@id/llColor"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/llColor" />
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/btnDice"-->
+<!--            android:layout_width="37dp"-->
+<!--            android:layout_height="37dp"-->
+<!--            android:elevation="1dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:src="@drawable/imv_random"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/llColor"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/llColor" />-->
 
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/imvShowColor"-->
+<!--            android:layout_width="37dp"-->
+<!--            android:layout_height="37dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:elevation="1dp"-->
+<!--            android:src="@drawable/imv_color"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/rl" />-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imvShowColor"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
+            android:id="@+id/img_bg_color"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toTopOf="@+id/llColor"
+            app:layout_constraintBottom_toBottomOf="@+id/llColor"
+            app:layout_constraintStart_toStartOf="@+id/llColor"
+            app:layout_constraintEnd_toEndOf="@+id/llColor"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:elevation="1dp"
-            android:src="@drawable/imv_color"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rl" />
-
+            android:src="@drawable/bg_color_custom"/>
         <LinearLayout
-            android:elevation="1dp"
+            android:elevation="2dp"
             android:id="@+id/llColor"
             android:layout_width="0dp"
+
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginHorizontal="32dp"
             android:gravity="start"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@id/imvShowColor"
-            app:layout_constraintEnd_toStartOf="@id/btnDice"
-            app:layout_constraintStart_toEndOf="@id/imvShowColor"
-            app:layout_constraintTop_toTopOf="@id/imvShowColor">
+            app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
+            app:layout_constraintEnd_toEndOf="@+id/llPart"
+            app:layout_constraintStart_toStartOf="@+id/llPart"
+            app:layout_constraintTop_toTopOf="@id/guidelineHorizontal">
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_gradient_16"
                 android:orientation="vertical"
                 app:cardCornerRadius="14dp"
                 app:strokeColor="#4C5AF2"
@@ -217,7 +229,12 @@
 
             </FrameLayout>
         </LinearLayout>
-
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
         <LinearLayout
             android:id="@+id/llPart"
             android:layout_width="match_parent"
@@ -225,8 +242,8 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/img_frame_bg_layer_custom"
             android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@id/llNav"
-            app:layout_constraintTop_toBottomOf="@id/btnDice">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvPart"
@@ -247,7 +264,7 @@
         <LinearLayout
             android:id="@+id/llNav"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="64dp"
             android:background="@drawable/bg_nav_custom"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent">

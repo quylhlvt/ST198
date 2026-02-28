@@ -15,7 +15,7 @@
     <color name="color_app">#205ABE</color>
     <color name="_CCCCCC">#cccccc</color>
     <color name="showdown_olive">#1F000000</color>
-    <color name="color_draw">#78FECB00</color>
+    <color name="color_draw">#DA4EAC</color>
     <color name="color_1">#E2D2D2</color>
     <color name="color_2">#DCD5FF</color>
     <color name="color_3">#B7E9F8</color>
@@ -83,12 +83,15 @@
     <color name="app_color3">#861661</color>
     <color name="app_color4">#ED64BF</color>
     <color name="app_color5">#BC4C9A</color>
-    <color name="app_color6">#01579B</color>
-    <color name="app_color7">#FF9CFD</color>
+    <color name="app_color6">#F285CD</color>
+    <color name="app_color7">#FFB8FA</color>
     <color name="app_color8">#0EA400</color>
     <color name="app_color9">#FF008C</color>
     <color name="app_color10">#FE8700</color>
     <color name="app_color11">#2AABEE</color>
+
+    <color name="gray_stroker_custom">#CCCCCC</color>
+    <color name="gray_text_font">#7F7F7F</color>
     <color name="shadown_item_cate">#E8C0F5</color>
     <color name="color_text_intro">#1F2F4F</color>
     <color name="stroke_layercustom_select">#FFCBFF</color>

@@ -11,7 +11,7 @@
     </style>
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percents" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">30%</item>
     </style>
     <style name="single_marquee">
         <item name="android:singleLine">true</item>

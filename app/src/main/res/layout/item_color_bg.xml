@@ -13,25 +13,21 @@
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_margin="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-            <View
-                android:visibility="gone"
-                android:id="@+id/vFocus1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/bg_white_1000" />
-            <androidx.cardview.widget.CardView
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardColor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5.5dp"
                 app:cardBackgroundColor="@color/transparent"
-                app:cardCornerRadius="1000dp"
+                app:cardCornerRadius="4dp"
+                app:strokeColor="@color/gray_stroker_custom"
+                app:strokeWidth="0.5dp"
                 app:cardElevation="0dp">
 
                 <!--            imvColor-->
@@ -41,8 +37,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#EF5600" />
-            </androidx.cardview.widget.CardView>
-
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:visibility="visible"
+                android:id="@+id/vFocus1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="4dp"
+                app:strokeColor="@color/app_color"
+                />
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

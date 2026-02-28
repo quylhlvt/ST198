@@ -17,6 +17,7 @@ class ChooseColorDialog(context: Activity) : BaseDialog<DialogColorPickerBinding
     override fun initView() {
         binding.colorPickerView.hueSliderView = binding.hueSlider
         updateHexText(color)
+        binding.txtDone.isSelected=true
     }
 
     override fun bindView() {
@@ -38,7 +39,7 @@ class ChooseColorDialog(context: Activity) : BaseDialog<DialogColorPickerBinding
 
     private fun updateHexText(color: Int) {
         val hex = color and 0xFFFFFF
-        binding.txtColor.text =
-            String.format(Locale.US, "#%06x", hex)
+//        binding.txtColor.text =
+//            String.format(Locale.US, "#%06x", hex)
     }
 }

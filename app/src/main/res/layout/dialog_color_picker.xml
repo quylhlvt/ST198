@@ -16,12 +16,12 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="50dp"
+                android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/rufing_personaluse"
-                android:gravity="center"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="start"
                 android:text="@string/choose_color"
-                android:textColor="@color/app_color3"
+                android:textColor="@color/app_color"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,10 +40,9 @@
 
                 <ImageView
                     android:id="@+id/btnClose"
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_alignParentEnd="true"
-                    app:tint="@color/app_color3"
                     android:src="@drawable/ic_close_1_color"
                     />
             </RelativeLayout>
@@ -67,10 +66,7 @@
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/colorPickerView">
 
-                <ir.kotlin.kavehcolorpicker.KavehHueSlider
-                    android:id="@+id/hueSlider"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp" />
+
 
                 <!--                btnDone-->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,43 +78,40 @@
                     <RelativeLayout
                         android:id="@+id/relativeTxtColor"
                         android:layout_width="0dp"
-                        android:layout_height="38dp"
+                        android:layout_height="24dp"
                         android:layout_marginEnd="15dp"
-                        android:background="@drawable/bg_txt_choose_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/btnDone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <TextView
-                            android:id="@+id/txtColor"
+                        <ir.kotlin.kavehcolorpicker.KavehHueSlider
+                            android:id="@+id/hueSlider"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="@font/rufing_personaluse"
-                            android:gravity="center"
-                            android:text="@string/done"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            android:layout_height="match_parent" />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@+id/btnDone"
-                        android:layout_width="115dp"
-                        android:layout_height="38dp"
+                        android:layout_width="88dp"
+                        android:layout_height="44dp"
                         android:background="@drawable/bg_btn_choose_color"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
+                            android:id="@+id/txtDone"
+                            android:layout_marginHorizontal="2dp"
+                            style="@style/single_marquee"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_centerInParent="true"
-                            android:fontFamily="@font/rufing_personaluse"
+                            android:fontFamily="@font/cherry_bomb_regular"
                             android:gravity="center"
                             android:text="@string/done"
-                            android:textColor="@color/app_color3"
-                            android:textSize="18sp" />
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
                     </RelativeLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

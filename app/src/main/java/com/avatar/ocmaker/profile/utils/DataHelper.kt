@@ -400,7 +400,7 @@ object DataHelper {
             SelectedModel(
                 color = ContextCompat.getColor(
                     context,
-                    R.color.black
+                    R.color.white
                 )
             ),
             SelectedModel(

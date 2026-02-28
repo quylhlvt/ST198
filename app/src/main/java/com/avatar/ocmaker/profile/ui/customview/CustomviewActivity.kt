@@ -103,10 +103,10 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
                 updateColorSectionVisibility(0)
                 if (listData[adapterNav.posNav].listPath.size == 1) {
                     binding.llColor.visibility = View.INVISIBLE
-                    binding.imvShowColor.visibility = View.INVISIBLE
+//                    binding.imvShowColor.visibility = View.INVISIBLE
                 } else {
                     binding.llColor.visibility = View.VISIBLE
-                    binding.imvShowColor.visibility = View.VISIBLE
+//                    binding.imvShowColor.visibility = View.VISIBLE
                     adapterColor.submitList(listData[adapterNav.posNav].listPath)
                 }
                 adapterPart.setPos(arrInt[0][0])
@@ -129,10 +129,10 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
                 adapterPart.submitList(listData[adapterNav.posNav].listPath[adapterColor.posColor].listPath)
                 if (listData[adapterNav.posNav].listPath.size == 1) {
                     binding.llColor.visibility = View.INVISIBLE
-                    binding.imvShowColor.visibility = View.INVISIBLE
+//                    binding.imvShowColor.visibility = View.INVISIBLE
                 } else {
                     binding.llColor.visibility = View.VISIBLE
-                    binding.imvShowColor.visibility = View.VISIBLE
+//                    binding.imvShowColor.visibility = View.VISIBLE
                     adapterColor.submitList(listData[adapterNav.posNav].listPath)
                 }
                 updateColorSectionVisibility(adapterNav.posNav)
@@ -446,28 +446,28 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
             }
         }
         binding.apply {
-            imvShowColor.onSingleClick {
-                if (listData[adapterNav.posNav].listPath.size <= 1) return@onSingleClick
-
-                val newState = !arrShowColor[adapterNav.posNav]
-                arrShowColor[adapterNav.posNav] = newState
-
-                // Animate visibility change
-                if (newState) {
-                    binding.apply {
-                        imvShowColor.setImageResource(R.drawable.imv_color)
-                        llColor.visibility = View.VISIBLE
-                        llColor.alpha = 0f
-                        llColor.animate().alpha(1f).setDuration(200).start()
-                    }
-
-                } else {
-                    imvShowColor.setImageResource(R.drawable.imv_color_hide)
-                    binding.llColor.animate().alpha(0f).setDuration(200).withEndAction {
-                        binding.llColor.visibility = View.INVISIBLE
-                    }.start()
-                }
-            }
+//            imvShowColor.onSingleClick {
+//                if (listData[adapterNav.posNav].listPath.size <= 1) return@onSingleClick
+//
+//                val newState = !arrShowColor[adapterNav.posNav]
+//                arrShowColor[adapterNav.posNav] = newState
+//
+//                // Animate visibility change
+//                if (newState) {
+//                    binding.apply {
+//                        imvShowColor.setImageResource(R.drawable.imv_color)
+//                        llColor.visibility = View.VISIBLE
+//                        llColor.alpha = 0f
+//                        llColor.animate().alpha(1f).setDuration(200).start()
+//                    }
+//
+//                } else {
+//                    imvShowColor.setImageResource(R.drawable.imv_color_hide)
+//                    binding.llColor.animate().alpha(0f).setDuration(200).withEndAction {
+//                        binding.llColor.visibility = View.INVISIBLE
+//                    }.start()
+//                }
+//            }
             btnReset.onSingleClick {
                 if(!DataHelper.arrBlackCentered[blackCentered].checkDataOnline || isInternetAvailable(
                         applicationContext
@@ -515,82 +515,82 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
                 }
                 dialog.show()
             }
-            btnRevert.onSingleClick {
-                checkRevert = !checkRevert
-                if (checkRevert) {
-                    listImg.forEach {
-                        it.scaleX = 1f
-                    }
-                } else {
-                    listImg.forEach {
-                        it.scaleX = -1f
-                    }
-                }
-            }
-            btnDice.onSingleClick {
-                if (!DataHelper.arrBlackCentered[blackCentered].checkDataOnline || isInternetAvailable(
-                        applicationContext
-                    )
-                ) {
-                    // Disable save ngay lập tức
-                    canSave = false
-                    btnSave.alpha = 0.5f
-
-                    countRandom++
-//                    if (countRandom == 3) {
-//                        btnDice.inhide()
+//            btnRevert.onSingleClick {
+//                checkRevert = !checkRevert
+//                if (checkRevert) {
+//                    listImg.forEach {
+//                        it.scaleX = 1f
 //                    }
-                    listData.forEachIndexed { index, partBody ->
-                        if (partBody.listPath.size > 1) {
-                            arrInt[index][1] = (0..<partBody.listPath.size).random()
-                        } else {
-                            arrInt[index][1] = 0
-                        }
-
-                        if (partBody.listPath[arrInt[index][1]].listPath[0] == "none") {
-                            if (partBody.listPath[arrInt[index][1]].listPath.size > 3) {
-                                arrInt[index][0] = (2..<partBody.listPath[arrInt[index][1]].listPath.size).random()
-                            } else {
-                                arrInt[index][0] = 2
-                            }
-                        } else {
-                            if (partBody.listPath[arrInt[index][1]].listPath.size > 2) {
-                                arrInt[index][0] = (1..<partBody.listPath[arrInt[index][1]].listPath.size).random()
-                            } else {
-                                arrInt[index][0] = 1
-                            }
-                        }
-
-                        putImage(
-                            partBody.icon,
-                            arrInt[index][0],
-                            false,
-                            index,
-                            arrInt[index][1]
-                        )
-                    }
-
-                    adapterPart.setPos(arrInt[adapterNav.posNav][0])
-                    adapterColor.setPos(arrInt[adapterNav.posNav][1])
-                    adapterPart.submitList(listData[adapterNav.posNav].listPath[adapterColor.posColor].listPath)
-                    updateColorSectionVisibility()
-
-                    binding.rcvPart.post {
-                        binding.rcvPart.smoothScrollToPosition(adapterPart.posPath)
-                    }
-                    binding.rcvColor.post {
-                        binding.rcvColor.smoothScrollToPosition(adapterColor.posColor)
-                    }
-
-                    // Enable lại save sau 2 giây (thời gian load ảnh)
-                    binding.root.postDelayed({
-                        canSave = true
-                        btnSave.alpha = 1f
-                    }, 2000)
-                } else {
-                    DialogExit(this@CustomviewActivity, "loadingnetwork").show()
-                }
-            }
+//                } else {
+//                    listImg.forEach {
+//                        it.scaleX = -1f
+//                    }
+//                }
+//            }
+//            btnDice.onSingleClick {
+//                if (!DataHelper.arrBlackCentered[blackCentered].checkDataOnline || isInternetAvailable(
+//                        applicationContext
+//                    )
+//                ) {
+//                    // Disable save ngay lập tức
+//                    canSave = false
+//                    btnSave.alpha = 0.5f
+//
+//                    countRandom++
+////                    if (countRandom == 3) {
+////                        btnDice.inhide()
+////                    }
+//                    listData.forEachIndexed { index, partBody ->
+//                        if (partBody.listPath.size > 1) {
+//                            arrInt[index][1] = (0..<partBody.listPath.size).random()
+//                        } else {
+//                            arrInt[index][1] = 0
+//                        }
+//
+//                        if (partBody.listPath[arrInt[index][1]].listPath[0] == "none") {
+//                            if (partBody.listPath[arrInt[index][1]].listPath.size > 3) {
+//                                arrInt[index][0] = (2..<partBody.listPath[arrInt[index][1]].listPath.size).random()
+//                            } else {
+//                                arrInt[index][0] = 2
+//                            }
+//                        } else {
+//                            if (partBody.listPath[arrInt[index][1]].listPath.size > 2) {
+//                                arrInt[index][0] = (1..<partBody.listPath[arrInt[index][1]].listPath.size).random()
+//                            } else {
+//                                arrInt[index][0] = 1
+//                            }
+//                        }
+//
+//                        putImage(
+//                            partBody.icon,
+//                            arrInt[index][0],
+//                            false,
+//                            index,
+//                            arrInt[index][1]
+//                        )
+//                    }
+//
+//                    adapterPart.setPos(arrInt[adapterNav.posNav][0])
+//                    adapterColor.setPos(arrInt[adapterNav.posNav][1])
+//                    adapterPart.submitList(listData[adapterNav.posNav].listPath[adapterColor.posColor].listPath)
+//                    updateColorSectionVisibility()
+//
+//                    binding.rcvPart.post {
+//                        binding.rcvPart.smoothScrollToPosition(adapterPart.posPath)
+//                    }
+//                    binding.rcvColor.post {
+//                        binding.rcvColor.smoothScrollToPosition(adapterColor.posColor)
+//                    }
+//
+//                    // Enable lại save sau 2 giây (thời gian load ảnh)
+//                    binding.root.postDelayed({
+//                        canSave = true
+//                        btnSave.alpha = 1f
+//                    }, 2000)
+//                } else {
+//                    DialogExit(this@CustomviewActivity, "loadingnetwork").show()
+//                }
+//            }
             llLoading.onSingleClick {
                 showToast(
                     applicationContext,
@@ -690,9 +690,9 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
 
         // Sử dụng animate() để transition mượt mà hơn
         if (!hasMultipleColors) {
-            binding.imvShowColor.animate().alpha(0f).setDuration(150).withEndAction {
-                binding.imvShowColor.visibility = View.INVISIBLE
-            }
+//            binding.imvShowColor.animate().alpha(0f).setDuration(150).withEndAction {
+//                binding.imvShowColor.visibility = View.INVISIBLE
+//            }
             binding.llColor.animate().alpha(0f).setDuration(150).withEndAction {
                 binding.llColor.visibility = View.INVISIBLE
             }
@@ -700,9 +700,9 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
         }
 
         // Có nhiều màu
-        binding.imvShowColor.animate().alpha(1f).setDuration(150).withStartAction {
-            binding.imvShowColor.visibility = View.VISIBLE
-        }
+//        binding.imvShowColor.animate().alpha(1f).setDuration(150).withStartAction {
+//            binding.imvShowColor.visibility = View.VISIBLE
+//        }
 
         if (arrShowColor[posNav]) {
             binding.llColor.animate().alpha(1f).setDuration(150).withStartAction {

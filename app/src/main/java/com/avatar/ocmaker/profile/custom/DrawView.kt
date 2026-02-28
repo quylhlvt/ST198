@@ -688,11 +688,11 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
                         DrawKey.LEFT_BOTTOM -> setupMatrix(icon, x3, y3, rotation)
                         DrawKey.RIGHT_BOTTOM -> setupMatrix(icon, x4, y4, rotation)
                     }
-                    if (icon.positionDefault == DrawKey.LEFT_BOTTOM) {
+                    if (icon.positionDefault == DrawKey.TOP_LEFT) {
                         if (handlingDraw!!.isText) {
 
                         }
-                    } else if (icon.positionDefault == DrawKey.RIGHT_TOP) {
+                    } else if (icon.positionDefault == DrawKey.TOP_LEFT) {
                         if (!handlingDraw!!.isCharacter) {
                             icon.draw(canvas, borderPaint)
                         }
@@ -953,19 +953,19 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
 
     private fun setupDefaultIcons() {
         val deleteIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_close_1), DrawKey.RIGHT_TOP
+            ContextCompat.getDrawable(context, R.drawable.ic_close_1), DrawKey.LEFT_BOTTOM
         )
         deleteIcon.event = DeleteEvent()
         val zoomIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_rotation), DrawKey.RIGHT_BOTTOM
+            ContextCompat.getDrawable(context, R.drawable.ic_rotation), DrawKey.RIGHT_TOP
         )
         zoomIcon.event = ZoomEvent()
         val flipIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_flip_add), DrawKey.TOP_LEFT
+            ContextCompat.getDrawable(context, R.drawable.ic_flip_add), DrawKey.RIGHT_BOTTOM
         )
         flipIcon.event = FlipEvent()
         val editIcon = BitmapDrawIcon(
-            ContextCompat.getDrawable(context, R.drawable.ic_close_1), DrawKey.LEFT_BOTTOM
+            ContextCompat.getDrawable(context, R.drawable.ic_close_1), DrawKey.TOP_LEFT
         )
         editIcon.event = EditEvent()
         iconList.clear()

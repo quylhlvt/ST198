@@ -28,40 +28,8 @@ class FontAdapter :
         binding.tv.typeface = ResourcesCompat.getFont(binding.root.context, data.color)
         if (data.isSelected) {
             binding.imv.setImageResource(R.drawable.imv_font_true)
-
-            // Set gradient cho text
-            binding.tv.post {
-                val gradient = LinearGradient(
-                    0f, 0f,                         // điểm bắt đầu (trên)
-                    0f, binding.tv.height.toFloat(), // điểm kết thúc (dưới)
-                    intArrayOf(
-                        "#2AABEE".toColorInt(),
-                        "#FFE167".toColorInt()
-                    ),
-                    null,
-                    Shader.TileMode.CLAMP
-                )
-
-                binding.tv.paint.shader = gradient
-                binding.tv.invalidate()
-            }
         } else {
             binding.imv.setImageResource(R.drawable.imv_font_false)
-            binding.tv.post {
-                val gradient = LinearGradient(
-                    0f, 0f,                         // điểm bắt đầu (trên)
-                    0f, binding.tv.height.toFloat(), // điểm kết thúc (dưới)
-                    intArrayOf(
-                        "#FFFFFF".toColorInt(),
-                        "#FFFFFF".toColorInt()
-                    ),
-                    null,
-                    Shader.TileMode.CLAMP
-                )
-
-                binding.tv.paint.shader = gradient
-                binding.tv.invalidate()
-            }
         }
     }
 

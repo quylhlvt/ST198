@@ -7,7 +7,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="39dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="3dp"
         android:layout_marginEnd="3dp">

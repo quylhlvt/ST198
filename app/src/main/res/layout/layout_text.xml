@@ -10,28 +10,27 @@
     android:layout_width="match_parent"
     android:background="@drawable/img_frame_bg_layer_bg"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/titleBg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/rufing_personaluse"
-        android:text="@string/text"
-        android:textColor="@color/app_color2"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/titleBg"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:fontFamily="@font/rufing_personaluse"-->
+<!--        android:text="@string/text"-->
+<!--        android:textColor="@color/app_color2"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imvTick"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginEnd="22dp"
         android:src="@drawable/imv_tick"
-        android:tint="@color/app_color2"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/titleBg"
-        app:layout_constraintTop_toTopOf="@+id/titleBg" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <ScrollView
         android:layout_width="0dp"
@@ -39,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/imvTick">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,10 +52,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
-                android:fontFamily="@font/nunito_semi_bold"
+                android:fontFamily="@font/cherry_bomb_regular"
                 android:text="@string/text"
-                android:textColor="@color/app_color2"
-                android:textSize="14sp"
+                android:textColor="@color/app_color6"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,9 +65,9 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="22dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/bg_white_8"
-                android:fontFamily="@font/nunito_regular"
+                android:fontFamily="@font/londrina_solid_regular"
                 android:hint="@string/type_your_content"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -76,7 +75,7 @@
                 android:paddingStart="14dp"
                 android:paddingEnd="6dp"
                 android:singleLine="true"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textColorHint="#80868686"
                 android:textSize="14sp"
                 app:layout_constraintTop_toBottomOf="@id/tv" />
@@ -86,11 +85,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/nunito_semi_bold"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/cherry_bomb_regular"
                 android:text="@string/font"
-                android:textColor="@color/app_color2"
-                android:textSize="14sp"
+                android:textColor="@color/app_color6"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edt" />
 
@@ -98,7 +97,7 @@
                 android:id="@+id/rcvFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="8dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 android:paddingStart="14dp"
@@ -113,10 +112,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/nunito_semi_bold"
-                android:text="@string/color"
-                android:textColor="@color/app_color2"
-                android:textSize="14sp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:text="@string/color2"
+                android:textColor="@color/app_color6"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rcvFont" />
 
@@ -124,7 +123,6 @@
                 android:id="@+id/rcvColor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
                 android:paddingStart="14dp"

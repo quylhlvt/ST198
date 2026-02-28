@@ -15,14 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/imv_font_true"/>
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Aa"
-            android:textColor="@color/app_color3"
+            android:textColor="@color/gray_text_font"
             android:textSize="18sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

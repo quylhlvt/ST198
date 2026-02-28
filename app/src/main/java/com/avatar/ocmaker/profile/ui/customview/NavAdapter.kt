@@ -1,7 +1,9 @@
 package com.avatar.ocmaker.profile.ui.customview
 
 import android.content.Context
+import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.avatar.ocmaker.profile.base.AbsBaseAdapter
 import com.avatar.ocmaker.profile.base.AbsBaseDiffCallBack
@@ -40,15 +42,17 @@ class NavAdapter(context: Context) : AbsBaseAdapter<BodyPartModel, ItemNavigatio
     ) {
         Glide.with(binding.root).load(data.icon).encodeQuality(90).override(256).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(binding.imv)
         if (posNav == position) {
-            binding.bg.strokeColor = ContextCompat.getColor(
-                binding.root.context,
-                R.color.app_color2
-            )
+            binding.frameStroker.visibility = View.VISIBLE
+//            binding.bg.strokeColor = ContextCompat.getColor(
+//                binding.root.context,
+//                R.color.app_color2
+//            )
         } else {
-            binding.bg.strokeColor = ContextCompat.getColor(
-                binding.root.context,
-                R.color.white
-            )
+            binding.frameStroker.visibility = View.INVISIBLE
+//            binding.bg.strokeColor = ContextCompat.getColor(
+//                binding.root.context,
+//                R.color.white
+//            )
         }
 
         binding.root.onClickCustom {

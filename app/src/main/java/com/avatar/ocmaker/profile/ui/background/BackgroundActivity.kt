@@ -50,6 +50,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.ObjectKey
 import com.avatar.ocmaker.profile.R
 import com.avatar.ocmaker.profile.databinding.ActivityBackgroundBinding
+import com.avatar.ocmaker.profile.utils.DataHelper.updateMargin
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -147,11 +148,11 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
 
     fun initRcv() {
         binding.apply {
-//            iclBg.rcvColor.itemAnimator = null
-//            iclBg.rcvColor.adapter = adapterColor
-//
-//            iclBg.rcvImage.itemAnimator = null
-//            iclBg.rcvImage.adapter = adapterImage
+            iclBg.rcvColor.itemAnimator = null
+            iclBg.rcvColor.adapter = adapterColor
+
+            iclBg.rcvImage.itemAnimator = null
+            iclBg.rcvImage.adapter = adapterImage
 
             iclText.rcvColor.itemAnimator = null
             iclText.rcvColor.adapter = adapterColorText
@@ -175,7 +176,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
 //            addDrawable(viewModel.pathDefault, true)
 
             withContext(Dispatchers.Main) {
-                Glide.with(this@BackgroundActivity).load(viewModel.pathDefault).into(binding.imvBackground)
+                Glide.with(this@BackgroundActivity).load(viewModel.pathDefault).into(binding.imvBackground1)
                 adapterImage.submitList(viewModel.backgroundImageList)
                 adapterColor.submitList(viewModel.backgroundColorList)
                 adapterStiker.submitList(viewModel.stickerList)
@@ -251,19 +252,19 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                 clearFocus()
             }
 
-//            btnBg.onSingleClick {
-//                hideKeyboard()
-//                selectBottomTab(btnBg)
-////                llBG.show()
-//                linearbg.show()
-//                llStiker.hide()
-//                llText.hide()
-//                llTextBG.hide()
-//            }
+            btnBg.onSingleClick {
+                hideKeyboard()
+                selectBottomTab(btnBg)
+                llBG.show()
+                linearbg.show()
+                llStiker.hide()
+                llText.hide()
+                llTextBG.hide()
+            }
             btnItem.onSingleClick {
                 hideKeyboard()
                 selectBottomTab(btnItem)
-//                llBG.hide()
+                llBG.hide()
                 llStiker.show()
                 llText.hide()
                 linearbg.hide()
@@ -272,7 +273,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
             btnBgText.onSingleClick {
                 hideKeyboard()
                 selectBottomTab(btnBgText)
-//                llBG.hide()
+                llBG.hide()
                 linearbg.hide()
                 llStiker.hide()
                 llTextBG.show()
@@ -281,34 +282,34 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
             btnText.onSingleClick {
                 hideKeyboard()
                 selectBottomTab(btnText)
-//                llBG.hide()
+                llBG.hide()
                 linearbg.hide()
                 llStiker.hide()
                 llTextBG.hide()
                 llText.show()
             }
-//            binding.apply {
-//                btnImage.onSingleClick {
-//                    iclBg.apply {
-//                        rcvImage.show()
-//                        rcvColor.hide()
-//                    }
-//                    btnImage.setBackgroundResource(R.drawable.img_select)
+            binding.apply {
+                btnImage.onSingleClick {
+                    iclBg.apply {
+                        rcvImage.show()
+                        rcvColor.hide()
+                    }
+                    btnImage.setBackgroundResource(R.drawable.img_select)
 //                    txtImgage.setTextColor( ContextCompat.getColor(this@BackgroundActivity, R.color.white))
-//                    btnColor.setBackgroundResource(R.drawable.img_unselect)
+                    btnColor.setBackgroundResource(R.drawable.img_unselect)
 //                    txtColor.setTextColor( ContextCompat.getColor(this@BackgroundActivity, R.color.app_color3))
-//                }
-//                btnColor.onSingleClick {
-//                    iclBg.apply {
-//                        rcvColor.show()
-//                        rcvImage.hide()
-//                    }
+                }
+                btnColor.onSingleClick {
+                    iclBg.apply {
+                        rcvColor.show()
+                        rcvImage.hide()
+                    }
 //                    txtColor.setTextColor( ContextCompat.getColor(this@BackgroundActivity, R.color.white))
-//                    btnColor.setBackgroundResource(R.drawable.img_select)
+                    btnColor.setBackgroundResource(R.drawable.img_select)
 //                    txtImgage.setTextColor( ContextCompat.getColor(this@BackgroundActivity, R.color.app_color3))
-//                    btnImage.setBackgroundResource(R.drawable.img_unselect)
-//                }
-//            }
+                    btnImage.setBackgroundResource(R.drawable.img_unselect)
+                }
+            }
             imvBack.onSingleClick {
                 var dialog = DialogExit(
                     this@BackgroundActivity,
@@ -343,7 +344,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                                     false
                                 viewModel.textColorList[1].isSelected = true
                                 adapterColorText.posSelect = 1
-                                iclText.edt.setTextColor("#000000".toColorInt())
+                                iclText.edt.setTextColor("#FFFFFF".toColorInt())
                                 adapterColorText.submitList(viewModel.textColorList)
 
                                 if (adapterFont.posSelect > 0) {
@@ -485,9 +486,8 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
     }
 
     private fun selectBottomTab(selectedBtn: ImageView) {
-        // Danh sách tất cả 4 nút tab
         val tabs = listOf(
-//            binding.btnBg to Pair(R.drawable.imv_bg, R.drawable.imv_bg_true),
+            binding.btnBg to Pair(R.drawable.imv_bg, R.drawable.imv_bg_true),
             binding.btnItem to Pair(R.drawable.imv_item, R.drawable.imv_item_true),
             binding.btnBgText to Pair(R.drawable.imv_bg_text, R.drawable.imv_bg_text_true),
             binding.btnText to Pair(R.drawable.imv_text, R.drawable.imv_text_true)
@@ -496,17 +496,23 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
         tabs.forEach { (btn, icons) ->
             val (normalIcon, selectedIcon) = icons
             if (btn == selectedBtn) {
-                // Nút được chọn
                 btn.isSelected = true
                 btn.setImageResource(selectedIcon)
-//                btn.updateMargin(this@BackgroundActivity, bottomDp = 15)
+                setViewSize(btn, 48)
             } else {
-                // Các nút khác → reset
                 btn.isSelected = false
                 btn.setImageResource(normalIcon)
-//                btn.updateMargin(this@BackgroundActivity, bottomDp = 0)
+                setViewSize(btn, 40)
             }
         }
+    }
+
+    private fun setViewSize(view: View, sizeDp: Int) {
+        val sizePx = (sizeDp * resources.displayMetrics.density).toInt()
+        val params = view.layoutParams
+        params.width = sizePx
+        params.height = sizePx
+        view.layoutParams = params
     }
 
     private val pickImageLauncher = registerForActivityResult(
@@ -553,7 +559,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                     viewModel.textColorList[adapterColorText.posSelect].isSelected = false
                     viewModel.textColorList[1].isSelected = true
                     adapterColorText.posSelect = 1
-                    iclText.edt.setTextColor("#000000".toColorInt())
+                    iclText.edt.setTextColor("#FFFFFF".toColorInt())
                     adapterColorText.submitList(viewModel.textColorList)
 
                     if (adapterFont.posSelect > 0) {
