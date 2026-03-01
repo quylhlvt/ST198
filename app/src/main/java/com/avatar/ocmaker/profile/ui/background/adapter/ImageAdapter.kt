@@ -22,7 +22,7 @@ class ImageAdapter :
         data: SelectedModel,
         holder: RecyclerView.ViewHolder
     ) {
-        binding.tvAddImage.isSelected = true
+//        binding.tvAddImage.isSelected = true
         binding.imvImage.onSingleClick {
             onClick?.invoke(position)
         }
@@ -30,11 +30,11 @@ class ImageAdapter :
         Glide.with(binding.root).load(data.path).encodeQuality(70)
             .dontAnimate()
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(binding.imvImage)
-        if (position == 0) {
-            binding.lnlAddItem.show()
-        } else {
-            binding.lnlAddItem.hide()
-        }
+//        if (position == 0) {
+//            binding.lnlAddItem.show()
+//        } else {
+//            binding.lnlAddItem.hide()
+//        }
         if (data.isSelected) {
             binding.vFocus.show()
 

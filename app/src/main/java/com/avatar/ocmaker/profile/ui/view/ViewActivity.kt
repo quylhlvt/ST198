@@ -182,9 +182,9 @@ class ViewActivity : AbsBaseActivity<ActivityViewBinding>() {
         }
         path = intent.getStringExtra("data").toString()
         if (intent?.getStringExtra("type") == "avatar") {
-            binding.imvEdit.show()
+//            binding.imvEdit.show()
         } else {
-            binding.imvEdit.hide()
+//            binding.imvEdit.hide()
 
         }
 
@@ -199,50 +199,50 @@ class ViewActivity : AbsBaseActivity<ActivityViewBinding>() {
             tvEditShare.isSelected = true
             tvDownload.isSelected = true
             imvBack.onSingleClick { finish() }
-            imvEdit.onSingleClick {
-                viewModel.getAvatar(path) { avatar ->
-                    if (!isInternetAvailable(this@ViewActivity) && avatar!!.online == true){
-                        DialogExit(
-                            this@ViewActivity,
-                            "loadingnetwork"
-                        ).show()
-                        return@getAvatar
-                    }
-                    if (avatar != null) {
-                        var a =
-                            DataHelper.arrBlackCentered.indexOfFirst { it.avt == avatar.pathAvatar }
-                        if (a > -1) {
-                            var a = avatar.pathAvatar.split("/")
-                            var b = a[a.size - 1]
-
-                                startActivity(
-                                    Intent(
-                                        applicationContext,
-                                        CustomviewActivity::class.java
-                                    ).putExtra(
-                                        "data",
-                                        DataHelper.arrBlackCentered.indexOfFirst { it.avt == avatar.pathAvatar })
-                                        .putExtra(
-                                            "arr",
-                                            toList(avatar.arr)
-                                        ).putExtra("checkEdit", true)
-                                        .putExtra("fileName", File(avatar.path).name)
-                                )
-
-                        } else {
-                            lifecycleScope.launch {
-                                val dialog= DialogExit(
-                                    this@ViewActivity,
-                                    "awaitdata"
-                                )
-                                dialog.show()
-                                delay(1500)
-                                dialog.dismiss()
-                            }
-                        }
-                    }
-                }
-            }
+//            imvEdit.onSingleClick {
+//                viewModel.getAvatar(path) { avatar ->
+//                    if (!isInternetAvailable(this@ViewActivity) && avatar!!.online == true){
+//                        DialogExit(
+//                            this@ViewActivity,
+//                            "loadingnetwork"
+//                        ).show()
+//                        return@getAvatar
+//                    }
+//                    if (avatar != null) {
+//                        var a =
+//                            DataHelper.arrBlackCentered.indexOfFirst { it.avt == avatar.pathAvatar }
+//                        if (a > -1) {
+//                            var a = avatar.pathAvatar.split("/")
+//                            var b = a[a.size - 1]
+//
+//                                startActivity(
+//                                    Intent(
+//                                        applicationContext,
+//                                        CustomviewActivity::class.java
+//                                    ).putExtra(
+//                                        "data",
+//                                        DataHelper.arrBlackCentered.indexOfFirst { it.avt == avatar.pathAvatar })
+//                                        .putExtra(
+//                                            "arr",
+//                                            toList(avatar.arr)
+//                                        ).putExtra("checkEdit", true)
+//                                        .putExtra("fileName", File(avatar.path).name)
+//                                )
+//
+//                        } else {
+//                            lifecycleScope.launch {
+//                                val dialog= DialogExit(
+//                                    this@ViewActivity,
+//                                    "awaitdata"
+//                                )
+//                                dialog.show()
+//                                delay(1500)
+//                                dialog.dismiss()
+//                            }
+//                        }
+//                    }
+//                }
+//            }
             imvDelete.onSingleClick {
                 var dialog = DialogExit(
                     this@ViewActivity,

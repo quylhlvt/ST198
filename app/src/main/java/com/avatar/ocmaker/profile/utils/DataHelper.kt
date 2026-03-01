@@ -267,7 +267,7 @@ object DataHelper {
             }
             .map { "${ASSET}bg/$it" }
             .toCollection(ArrayList())
-        arrBg.add(0, "")
+//        arrBg.add(0, "")
     }
 
     fun extractNumberFromPath(path: String): Int {

@@ -12,16 +12,33 @@
         android:layout_height="match_parent"
         android:background="@drawable/img_bg_splash">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <FrameLayout
             android:id="@+id/imvBack"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
+            android:layout_width="80dp"
+            android:layout_height="41dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="60dp"
+            android:background="@drawable/ic_back_app"
             android:elevation="2dp"
-            android:src="@drawable/ic_back_app"
+            app:layout_constraintDimensionRatio="0.8:0.44"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/single_marquee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:freezesText="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </FrameLayout>
 <!--        &lt;!&ndash;    native_ads&ndash;&gt;-->
 <!--        <FrameLayout-->
 <!--            android:id="@+id/native_ads"-->
@@ -32,34 +49,34 @@
 
 <!--            <include layout="@layout/ads_native_banner_shimmer" />-->
 <!--        </FrameLayout>-->
-        <com.avatar.ocmaker.profile.utils.OuterStrokeTextView
-            android:layout_width="match_parent"
-            android:elevation="1dp"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:text="@string/maker"
-            app:layout_constraintBottom_toBottomOf="@id/imvBack"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imvBack"
-            android:fontFamily="@font/cookies_regular"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            app:outerStrokeColor="@color/app_color2"
-            app:outerStrokeWidth="2dp"
-            app:outerStrokeJoinStyle="miter"
-            style="@style/single_marquee"
-            android:singleLine="true"
-            android:freezesText="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            />
+<!--        <com.avatar.ocmaker.profile.utils.OuterStrokeTextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:elevation="1dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/maker"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/imvBack"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@id/imvBack"-->
+<!--            android:fontFamily="@font/cookies_regular"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="22sp"-->
+<!--            app:outerStrokeColor="@color/app_color2"-->
+<!--            app:outerStrokeWidth="2dp"-->
+<!--            app:outerStrokeJoinStyle="miter"-->
+<!--            style="@style/single_marquee"-->
+<!--            android:singleLine="true"-->
+<!--            android:freezesText="true"-->
+<!--            android:ellipsize="marquee"-->
+<!--            android:marqueeRepeatLimit="marquee_forever"-->
+<!--            />-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcv"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="16dp"
             tools:itemCount="8"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"

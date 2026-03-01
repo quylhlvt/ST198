@@ -41,7 +41,7 @@ class SuccessActivity : AbsBaseActivity<ActivitySuccessBinding>() {
             tvDownload.isSelected = true
             tvMyWork.isSelected = true
             tvTitle.isSelected = true
-            tvContent.isSelected = true
+//            tvContent.isSelected = true
         }
       }
 
@@ -55,7 +55,6 @@ class SuccessActivity : AbsBaseActivity<ActivitySuccessBinding>() {
 //                )
 //            }
             imvHome.onSingleClick {
-
                     startActivity(
                         newIntent(
                             applicationContext,

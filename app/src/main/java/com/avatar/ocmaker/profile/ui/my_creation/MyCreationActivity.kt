@@ -211,26 +211,26 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityMyCreationBinding>() 
                         }
                         submitList(arrPathAvatar)
                         this@MyCreationActivity.binding.apply {
-                            imvTickAll.show()
+//                            imvTickAll.show()
                            imvDelete.show()
 //                            llBottom.show()
                             layoutSticker.show()
-                            if (arrCheckTick.size == arrPathAvatar.size) {
-                                imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
-                            } else {
-                                imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
-                            }
+//                            if (arrCheckTick.size == arrPathAvatar.size) {
+//                                imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
+//                            } else {
+//                                imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
+//                            }
                         }
                     }
                     "tick" -> {
                         if (pos in arrCheckTick) {
                             arrCheckTick.remove(pos)
-                            this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
+//                            this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
 
                         } else {
                             arrCheckTick.add(pos)
                             if (arrCheckTick.size == arrPathAvatar.size) {
-                                this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
+//                                this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
                             }
                         }
                         submitList(arrPathAvatar)
@@ -280,25 +280,25 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityMyCreationBinding>() 
                         }
                         submitList(arrPathDesign)
                         this@MyCreationActivity.binding.apply {
-                            imvTickAll.show()
+//                            imvTickAll.show()
                            imvDelete.show()
                             llBottom.show()
 
-                            if (arrCheckTick.size == arrPathDesign.size) {
-                                imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
-                            } else {
-                                imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
-                            }
+//                            if (arrCheckTick.size == arrPathDesign.size) {
+//                                imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
+//                            } else {
+//                                imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
+//                            }
                         }
                     }
                     "tick" -> {
                         if (pos in arrCheckTick) {
                             arrCheckTick.remove(pos)
-                            this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
+//                            this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
                         } else {
                             arrCheckTick.add(pos)
                             if (arrCheckTick.size == arrPathDesign.size) {
-                                this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
+//                                this@MyCreationActivity.binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_true)
                             }
                         }
                         submitList(arrPathDesign)
@@ -442,8 +442,8 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityMyCreationBinding>() 
         this@MyCreationActivity.binding.rcvAvatar.setMargins(16.dp(this@MyCreationActivity),6.dp(this@MyCreationActivity),16.dp(this@MyCreationActivity),0)
         this@MyCreationActivity.binding.rcvDesign.setMargins(16.dp(this@MyCreationActivity),6.dp(this@MyCreationActivity),16.dp(this@MyCreationActivity),0)
         checkLongClick = false
-        binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
-        binding.imvTickAll.visibility = View.GONE
+//        binding.imvTickAll.setImageResource(R.drawable.imv_tick_all_false)
+//        binding.imvTickAll.visibility = View.GONE
         binding.llBottom.visibility = View.GONE
         binding.imvDelete.visibility = View.GONE
         binding.layoutSticker.visibility = View.GONE

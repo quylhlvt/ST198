@@ -400,16 +400,16 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                 }
             }
             adapterImage.onClick = { pos ->
-                if (pos == 0) {
-                    pickImage(pickImageLauncher)
-                } else {
+//                if (pos == 0) {
+//                    pickImage(pickImageLauncher)
+//                } else {
                     clearFocusBG()
                     Glide.with(applicationContext).load(viewModel.backgroundImageList[pos].path)
                         .into(binding.imvBackground)
                     viewModel.backgroundImageList[pos].isSelected = true
                     adapterImage.posSelect = pos
                     adapterImage.submitList(viewModel.backgroundImageList)
-                }
+//                }
             }
             adapterColor.onClick = { pos ->
                 if (pos == 0) {

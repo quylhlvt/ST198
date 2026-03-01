@@ -9,23 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-<com.google.android.material.card.MaterialCardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
-    app:strokeWidth="0dp"
-    app:strokeColor="@color/app_color"
-    android:layout_marginHorizontal="7dp"
-    app:cardElevation="3dp"
-    android:layout_marginBottom="18dp"
-    >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_gradient_category"
-        android:padding="4dp"
-        >
+        android:layout_margin="4dp"
 
+        >
 
 
         <FrameLayout
@@ -36,30 +26,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:cardCornerRadius="20dp"
-                app:strokeWidth="0dp"
-                app:cardBackgroundColor="@color/white"
-                android:outlineAmbientShadowColor="#40000000"
-                >
-                <!--            imvImage-->
-                <ImageView
-                    android:id="@+id/imv"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img_intro1" />
-
-            </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/app_color4"
+            app:strokeWidth="5dp"
+            app:cardCornerRadius="16dp"/>
+             <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:strokeColor="@color/app_color5"
+            app:strokeWidth="2dp"
+                 android:layout_margin="2dp"
+            app:cardCornerRadius="16dp">
+                 <ImageView
+                     android:id="@+id/imv"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:scaleType="centerCrop"
+                     android:src="@drawable/img_intro1" />
+             </com.google.android.material.card.MaterialCardView>
 
         </FrameLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
 
     </FrameLayout>
 </layout>
