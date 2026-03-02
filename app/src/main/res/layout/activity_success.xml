@@ -39,7 +39,7 @@
                 android:textSize="16sp" />
         </FrameLayout>
 
-        <com.avatar.ocmaker.profile.utils.OuterStrokeTextView
+        <com.feminine.utils.OuterStrokeTextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="0dp"

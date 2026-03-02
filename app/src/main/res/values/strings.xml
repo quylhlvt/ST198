@@ -3,6 +3,7 @@
     <string name="this_action_may_contain_advertising">This action can contain ads</string>
     <string name="language">LANGUAGE</string>
     <string name="next">NEXT</string>
+    <string name="next1">Next</string>
     <string name="permission">PERMISSION</string>
     <string name="storage">STORAGE</string>
     <string name="notifications">NOTIFICATIONS</string>

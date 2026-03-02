@@ -39,7 +39,7 @@
                 android:gravity="center"/>
         </FrameLayout>
 
-<!--        <com.avatar.ocmaker.profile.utils.OuterStrokeTextView-->
+<!--        <com.feminine.OuterStrokeTextView-->
 <!--            android:id="@+id/titleQuick"-->
 <!--            android:layout_width="0dp"-->
 <!--            android:layout_height="0dp"-->

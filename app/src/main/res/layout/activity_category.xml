@@ -49,7 +49,7 @@
 
 <!--            <include layout="@layout/ads_native_banner_shimmer" />-->
 <!--        </FrameLayout>-->
-<!--        <com.avatar.ocmaker.profile.utils.OuterStrokeTextView-->
+<!--        <com.feminine.OuterStrokeTextView-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:elevation="1dp"-->
 <!--            android:gravity="center"-->

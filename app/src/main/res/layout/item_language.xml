@@ -6,7 +6,7 @@
 
         <variable
             name="languageModel"
-            type="com.avatar.ocmaker.profile.data.model.LanguageModel" />
+            type="com.feminine.data.model.LanguageModel" />
     </data>
 
 

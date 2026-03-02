@@ -9,10 +9,10 @@ plugins {
 }
 
 android {
-    namespace 'com.avatar.ocmaker.profile'
+    namespace 'com.feminine'
     compileSdk 36
     defaultConfig {
-        applicationId "com.avatar.ocmaker.profile"
+        applicationId "com.feminine"
         minSdk 24
         targetSdk 36
         versionCode 1
@@ -27,6 +27,9 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
         }
     }
     compileOptions {

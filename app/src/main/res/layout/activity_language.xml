@@ -15,7 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:paddingTop="46dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -25,7 +24,7 @@
             <!--                android:layout_height="wrap_content"-->
             <!--                android:orientation="horizontal">-->
 
-            <!--                <com.avatar.ocmaker.profile.utils.OuterStrokeTextView-->
+            <!--                <com.feminine.OuterStrokeTextView-->
             <!--                    app:outerStrokeColor="@color/app_color2"-->
             <!--                    app:outerStrokeWidth="2dp"-->
             <!--                    app:outerStrokeJoinStyle="miter"-->
@@ -131,8 +130,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_20_stroker_color_pink"
-                        android:paddingTop="45dp"
-                        android:paddingBottom="33dp">
+                        android:paddingTop="55dp"
+                        android:paddingBottom="43dp">
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rcl_language"

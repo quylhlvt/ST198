@@ -1,4 +1,4 @@
-package com.avatar.ocmaker.profile
+package com.feminine
 
 import org.junit.Assert
 import org.junit.Test

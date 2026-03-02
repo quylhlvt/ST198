@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "25063826817",
-    "project_id": "st213-catcreatormemecat",
-    "storage_bucket": "st213-catcreatormemecat.firebasestorage.app"
+    "project_number": "184463089092",
+    "project_id": "st95-pony-oc-maker",
+    "storage_bucket": "st95-pony-oc-maker.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:25063826817:android:a9e241ad079abeff50f480",
+        "mobilesdk_app_id": "1:184463089092:android:d3e255718b77d06ee11891",
         "android_client_info": {
-          "package_name": "com.avatar.ocmaker.profile"
+          "package_name": "com.feminine"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAfRZXcetnUWAEGOncWXOxr-PW7trHn5Xg"
+          "current_key": "AIzaSyCJxQBDlRpYVgesdCmqhClZzU7kcnBUUnY"
         }
       ],
       "services": {

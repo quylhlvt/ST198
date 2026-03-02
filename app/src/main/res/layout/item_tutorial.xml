@@ -7,7 +7,7 @@
 
         <variable
             name="mTutorialModel"
-            type="com.avatar.ocmaker.profile.data.model.TutorialModel" />
+            type="com.feminine.data.model.TutorialModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

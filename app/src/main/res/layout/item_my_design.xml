@@ -14,7 +14,7 @@
             android:id="@+id/imgstroker"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="8dp"
+            android:layout_margin="4dp"
             app:strokeColor="@color/app_color4"
             app:cardCornerRadius="16dp"
             app:strokeWidth="16dp"
@@ -50,9 +50,9 @@
                     android:id="@+id/btnDelete"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_gravity="end"
+                    android:layout_gravity="start"
                     android:layout_marginTop="12dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
                     android:src="@drawable/imv_delete" />
 
                 <!--        btnSelect-->

@@ -10,10 +10,17 @@
 
         <View
             android:id="@+id/guideline_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/navBottom" />
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llTop"
+            android:layout_marginBottom="8dp" />
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -99,30 +106,27 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-<!--        <ImageView-->
-<!--            android:id="@+id/imvBackground1"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:scaleType="fitXY"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/drawView"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/drawView"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/drawView"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/drawView"-->
-<!--            />-->
 
-
-        <com.avatar.ocmaker.profile.custom.DrawView
-            android:id="@+id/drawView"
-            android:layout_marginVertical="8dp"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imvBackground2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layerType="hardware"
-            android:layout_marginHorizontal="6dp"
+            app:cardCornerRadius="4dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/app_color"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/llTop">
+            app:layout_constraintTop_toBottomOf="@+id/llTop"
+            >
+        <com.feminine.custom.DrawView
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layerType="hardware"
+           >
             <ImageView
                 android:id="@+id/imvBackground"
                 android:layout_width="match_parent"
@@ -135,7 +139,9 @@
                 android:scaleType="fitXY"
                 />
 
-        </com.avatar.ocmaker.profile.custom.DrawView>
+        </com.feminine.custom.DrawView>
+        </com.google.android.material.card.MaterialCardView>
+
         <ImageView
             android:elevation="2dp"
             android:id="@+id/navBottom"
@@ -199,7 +205,6 @@
             android:id="@+id/linearbg"
             android:layout_marginTop="-3dp"
             android:gravity="center"
-
             app:layout_constraintTop_toTopOf="@id/ctl"
             app:layout_constraintDimensionRatio="2.64:0.32"
             app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +263,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ctl"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/guideline_vertical"
             app:layout_constraintBottom_toTopOf="@+id/navBottom">
 
             <LinearLayout
@@ -279,7 +286,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone">
-
                 <include
                     android:id="@+id/iclStiker"
                     layout="@layout/layout_stiker"

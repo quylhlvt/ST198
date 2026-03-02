@@ -16,9 +16,9 @@
             app:cardCornerRadius="4dp"
             app:strokeWidth="0dp"
             android:background="@color/transparent"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="0dp"
-            app:cardBackgroundColor="#1A000000"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/transparent"
             >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                         app:cardCornerRadius="4dp"
                         app:strokeWidth="2dp"
                         app:strokeColor="@color/app_color"
-                        app:cardBackgroundColor="#D6FFFFFF"
+                        app:cardBackgroundColor="@color/white"
 
                         >
 
