@@ -78,7 +78,6 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityMyCreationBinding>() 
     @Inject
     lateinit var apiRepository: ApiRepository
     var checkCallingDataOnline = false
-    override fun isRequireData(): Boolean = true
 
     val viewModel: CustomviewViewModel by viewModels()
     var checkAvatar = true

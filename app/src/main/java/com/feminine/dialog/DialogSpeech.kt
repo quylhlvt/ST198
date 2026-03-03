@@ -31,10 +31,16 @@ class DialogSpeech(context: Activity, val path: String) : BaseDialog<DialogSpeec
             edtSpeech.isFocusableInTouchMode = true
             edtSpeech.isFocusable = true
             edtSpeech.requestFocus()
-            Glide.with(context).load(path).into(binding.imvBubble)
-            edtSpeech.postDelayed({ context.showKeyboard(edtSpeech) },300)
-        }
 
+            // Chặn xuống dòng
+            edtSpeech.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                    android.text.InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
+            edtSpeech.maxLines = 1
+            edtSpeech.isSingleLine = true
+
+            Glide.with(context).load(path).into(binding.imvBubble)
+            edtSpeech.postDelayed({ context.showKeyboard(edtSpeech) }, 300)
+        }
     }
 
     override fun bindView() {
@@ -56,7 +62,12 @@ class DialogSpeech(context: Activity, val path: String) : BaseDialog<DialogSpeec
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    binding.tvGetText.text = p0.toString()
+                    val filtered = p0.toString().replace("\n", "")
+                    if (p0.toString() != filtered) {
+                        binding.edtSpeech.setText(filtered)
+                        binding.edtSpeech.setSelection(filtered.length)
+                    }
+                    binding.tvGetText.text = filtered
                 }
 
                 override fun afterTextChanged(p0: Editable?) {}

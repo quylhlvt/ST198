@@ -9,10 +9,12 @@ import com.feminine.utils.SystemUtils
 import com.feminine.utils.music.MusicLocal
 import com.feminine.utils.showSystemUI
 import com.feminine.R
+import com.feminine.data.repository.ApiRepository
+import com.feminine.utils.DataHelper
+import javax.inject.Inject
 
 abstract class AbsBaseActivity<V : ViewDataBinding> : AppCompatActivity() {
     lateinit var binding: V
-    open fun isRequireData(): Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,22 +29,9 @@ abstract class AbsBaseActivity<V : ViewDataBinding> : AppCompatActivity() {
     }
     override fun onResume() {
         super.onResume()
-            showSystemUI()
-        if (isRequireData() && isDataLost()) {
-            restartToMain()
-        }
+        showSystemUI()
     }
-    private fun isDataLost(): Boolean {
-        return com.feminine.utils.DataHelper.arrBlackCentered.isEmpty()
-    }
-    private fun restartToMain() {
-        val intent = android.content.Intent(this, com.feminine.ui.main.MainActivity::class.java).apply {
-            flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
-                    android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
-        startActivity(intent)
-        finish()
-    }
+
     override fun onRestart() {
         super.onRestart()
         SystemUtils.setLocale(this)
@@ -58,15 +47,15 @@ abstract class AbsBaseActivity<V : ViewDataBinding> : AppCompatActivity() {
     }
     open fun updateMusicIcon( musicButtons: ImageView) {
         val isPlaying = MusicLocal.status(this@AbsBaseActivity)
-    if (isPlaying) {
-        musicButtons.setImageResource( R.drawable.ic_music_app_true)
-        MusicLocal.play(this)
+        if (isPlaying) {
+            musicButtons.setImageResource( R.drawable.ic_music_app_true)
+            MusicLocal.play(this)
+        }
+        else {
+            musicButtons.setImageResource(R.drawable.ic_music_app_false)
+            MusicLocal.pause()
+        }
     }
-    else {
-        musicButtons.setImageResource(R.drawable.ic_music_app_false)
-        MusicLocal.pause()
-    }
-}
 
 
 }

@@ -45,7 +45,6 @@ class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {
     val adapterPart by lazy {
         PartAdapter()
     }
-    override fun isRequireData(): Boolean = true
 
     private val loadingLock = Any()
     private var canSave = true

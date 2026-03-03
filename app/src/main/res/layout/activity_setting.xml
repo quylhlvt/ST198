@@ -58,12 +58,7 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_more_set"
-                    android:tint="@color/white" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -93,12 +88,7 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_more_set"
-                    android:tint="@color/white" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -128,12 +118,7 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_more_set"
-                    android:tint="@color/white" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -163,12 +148,6 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_more_set"
-                    android:tint="@color/white" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

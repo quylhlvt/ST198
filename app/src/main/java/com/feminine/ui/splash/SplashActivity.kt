@@ -185,7 +185,7 @@ class SplashActivity : AbsBaseActivity<ActivitySplashBinding>() {
         } else {
             startActivity(Intent(this@SplashActivity, TutorialActivity::class.java))
         }
-        finish()
+//        finish()
     }
 
     override fun onBackPressed() {

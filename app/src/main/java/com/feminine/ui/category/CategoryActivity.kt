@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
+import android.util.Log
 import com.feminine.base.AbsBaseActivity
 import com.feminine.data.callapi.reponse.DataResponse
 import com.feminine.data.callapi.reponse.LoadingStatus
@@ -31,7 +32,6 @@ class CategoryActivity : AbsBaseActivity<ActivityCategoryBinding>() {
     val adapter by lazy { CategoryAdapter() }
 
     private var checkCallingDataOnline = false
-    override fun isRequireData(): Boolean = true
 
     private val networkReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -235,7 +235,8 @@ class CategoryActivity : AbsBaseActivity<ActivityCategoryBinding>() {
                 if (DataHelper.arrBlackCentered[it].checkDataOnline) {
                     if (isInternetAvailable(this@CategoryActivity)) {
                         var a = DataHelper.arrBlackCentered[it].avt.split("/")
-                        var b = a[a.size - 1]
+                        var b = a[a.size - 2]
+                        Log.d("testKey","${b}")
 
                             startActivity(
                                 newIntent(
@@ -252,7 +253,8 @@ class CategoryActivity : AbsBaseActivity<ActivityCategoryBinding>() {
                     }
                 } else {
                     var a = DataHelper.arrBlackCentered[it].avt.split("/")
-                    var b = a[a.size - 1]
+                    var b = a[a.size - 2]
+                    Log.d("testKey","${b}")
 
                     startActivity(
                         newIntent(

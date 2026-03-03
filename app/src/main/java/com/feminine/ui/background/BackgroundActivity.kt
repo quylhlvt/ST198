@@ -182,7 +182,6 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
             iclTextBG.rcv.adapter = adapterBGText
         }
     }
-    override fun isRequireData(): Boolean = true
 
     fun initData() {
         showLoading()
@@ -358,7 +357,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                             withContext(Dispatchers.Main) {
                                 binding.drawView.removeAllDraw()
                                 binding.iclText.edt.setText("")
-                                addDrawable(viewModel.pathDefault, true)
+//                                addDrawable(viewModel.pathDefault, true)
                                 clearFocusBG()
 
                                 viewModel.textColorList[adapterColorText.posSelect].isSelected =
