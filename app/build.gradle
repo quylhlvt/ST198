@@ -9,16 +9,16 @@ plugins {
 }
 
 android {
-    namespace 'com.feminine'
+    namespace 'com.female.maker.oc.creator'
     compileSdk 36
     defaultConfig {
-        applicationId "com.feminine"
+        applicationId "com.female.maker.oc.creator"
         minSdk 24
         targetSdk 36
         versionCode 1
         versionName "1.0.0"
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "Avatar_Profile_Maker_${versionName}_${formattedDate}"
+        archivesBaseName = "Female_Maker_OC_Creator_${versionName}_${formattedDate}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -27,9 +27,7 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
-            firebaseCrashlytics {
-                mappingFileUploadEnabled false
-            }
+
         }
     }
     compileOptions {

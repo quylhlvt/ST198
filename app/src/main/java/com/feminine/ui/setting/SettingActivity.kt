@@ -1,19 +1,19 @@
-package com.feminine.ui.setting
+package com.female.maker.oc.creator.ui.setting
 
 import android.view.View
-import com.feminine.base.AbsBaseActivity
-import com.feminine.ui.language.LanguageActivity
-import com.feminine.utils.RATE
-import com.feminine.utils.SharedPreferenceUtils
-import com.feminine.utils.newIntent
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.policy
-import com.feminine.utils.rateUs
-import com.feminine.utils.shareApp
-import com.feminine.utils.unItem
-import com.feminine.R
-import com.feminine.databinding.ActivitySettingBinding
-import com.feminine.utils.show
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.ui.language.LanguageActivity
+import com.female.maker.oc.creator.utils.RATE
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.utils.newIntent
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.policy
+import com.female.maker.oc.creator.utils.rateUs
+import com.female.maker.oc.creator.utils.shareApp
+import com.female.maker.oc.creator.utils.unItem
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivitySettingBinding
+import com.female.maker.oc.creator.utils.show
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

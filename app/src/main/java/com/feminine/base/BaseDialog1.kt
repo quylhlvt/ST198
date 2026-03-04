@@ -1,4 +1,4 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import android.app.Dialog
 import android.content.Context
@@ -12,7 +12,7 @@ import android.view.WindowManager
 import androidx.core.graphics.drawable.toDrawable
 import androidx.databinding.DataBindingUtil
 import androidx.viewbinding.ViewBinding
-import com.feminine.utils.SystemUtils
+import com.female.maker.oc.creator.utils.SystemUtils
 
 abstract class BaseDialog1<VB : ViewBinding>(
     context: Context,

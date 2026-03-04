@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,7 +9,7 @@ import android.graphics.Paint.Join
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.graphics.toColorInt
-import com.feminine.R
+import com.female.maker.oc.creator.R
 
 class StrokeAppCompatTextView  : AppCompatTextView {
     private var strokeWidth = 0f

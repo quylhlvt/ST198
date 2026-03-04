@@ -1,10 +1,10 @@
-package com.feminine.ui.customview
+package com.female.maker.oc.creator.ui.customview
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.feminine.data.model.AvatarModel
-import com.feminine.data.repository.RoomRepository
+import com.female.maker.oc.creator.data.model.AvatarModel
+import com.female.maker.oc.creator.data.repository.RoomRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

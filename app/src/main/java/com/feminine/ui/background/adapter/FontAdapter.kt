@@ -1,13 +1,13 @@
-package com.feminine.ui.background.adapter
+package com.female.maker.oc.creator.ui.background.adapter
 
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.data.model.SelectedModel
-import com.feminine.utils.onSingleClick
-import com.feminine.R
-import com.feminine.databinding.ItemFontBinding
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.data.model.SelectedModel
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemFontBinding
 
 class FontAdapter :
     AbsBaseAdapter<SelectedModel, ItemFontBinding>(R.layout.item_font, DiffCallBack()) {

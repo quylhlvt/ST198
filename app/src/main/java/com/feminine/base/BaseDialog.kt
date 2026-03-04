@@ -1,4 +1,4 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import android.app.Activity
 import android.app.Dialog
@@ -10,9 +10,9 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.feminine.utils.SystemUtils
-import com.feminine.utils.showSystemUI
-import com.feminine.R
+import com.female.maker.oc.creator.utils.SystemUtils
+import com.female.maker.oc.creator.utils.showSystemUI
+import com.female.maker.oc.creator.R
 
 abstract class BaseDialog <DB : ViewDataBinding>(var context : Activity, var canAble: Boolean) :
     Dialog(context, R.style.BaseDialog) {

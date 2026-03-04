@@ -1,4 +1,4 @@
-package com.feminine.dialog
+package com.female.maker.oc.creator.dialog
 
 import android.app.Activity
 import android.graphics.Bitmap
@@ -12,14 +12,14 @@ import android.view.View
 import android.view.WindowManager
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.isVisible
-import com.feminine.base.BaseDialog
-import com.feminine.utils.inhide
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.showKeyboard
-import com.feminine.utils.viewToBitmap
+import com.female.maker.oc.creator.base.BaseDialog
+import com.female.maker.oc.creator.utils.inhide
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.showKeyboard
+import com.female.maker.oc.creator.utils.viewToBitmap
 import com.bumptech.glide.Glide
-import com.feminine.R
-import com.feminine.databinding.DialogSpeechBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.DialogSpeechBinding
 
 class DialogSpeech(context: Activity, val path: String) : BaseDialog<DialogSpeechBinding>(context, false) {
     var onDoneClick: ((Bitmap?) -> Unit) = { }

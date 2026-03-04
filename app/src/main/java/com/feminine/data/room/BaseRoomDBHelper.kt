@@ -1,8 +1,8 @@
-package com.feminine.data.room
+package com.female.maker.oc.creator.data.room
 
 import android.content.Context
 import androidx.room.Room
-import com.feminine.utils.SingletonHolder
+import com.female.maker.oc.creator.utils.SingletonHolder
 
 
 open class BaseRoomDBHelper(context: Context) {

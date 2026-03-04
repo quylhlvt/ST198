@@ -1,4 +1,4 @@
-package com.feminine.data.model
+package com.female.maker.oc.creator.data.model
 
 import android.os.Parcelable
 import androidx.room.Entity

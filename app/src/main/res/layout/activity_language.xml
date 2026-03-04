@@ -24,7 +24,7 @@
             <!--                android:layout_height="wrap_content"-->
             <!--                android:orientation="horizontal">-->
 
-            <!--                <com.feminine.OuterStrokeTextView-->
+            <!--                <com.female.maker.oc.creator.OuterStrokeTextView-->
             <!--                    app:outerStrokeColor="@color/app_color2"-->
             <!--                    app:outerStrokeWidth="2dp"-->
             <!--                    app:outerStrokeJoinStyle="miter"-->

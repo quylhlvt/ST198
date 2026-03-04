@@ -1,13 +1,13 @@
-package com.feminine.utils.share.whatsapp
+package com.female.maker.oc.creator.utils.share.whatsapp
 
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.util.Log
 import androidx.databinding.ViewDataBinding
-import com.feminine.base.AbsBaseActivity
-import com.feminine.utils.showToast
-import com.feminine.R
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.utils.showToast
+import com.female.maker.oc.creator.R
 
 abstract class WhatsappSharingActivity<DB : ViewDataBinding> : AbsBaseActivity<DB>() {
 

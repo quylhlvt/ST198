@@ -1,4 +1,4 @@
-package com.feminine.service
+package com.female.maker.oc.creator.service
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 

@@ -1,11 +1,11 @@
-package com.feminine
+package com.female.maker.oc.creator
 
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.feminine.utils.music.MusicLocal
+import com.female.maker.oc.creator.utils.music.MusicLocal
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.HiltAndroidApp

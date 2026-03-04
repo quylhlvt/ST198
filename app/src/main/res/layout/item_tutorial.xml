@@ -7,7 +7,7 @@
 
         <variable
             name="mTutorialModel"
-            type="com.feminine.data.model.TutorialModel" />
+            type="com.female.maker.oc.creator.data.model.TutorialModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

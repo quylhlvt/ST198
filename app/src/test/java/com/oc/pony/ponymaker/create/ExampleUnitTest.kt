@@ -1,4 +1,4 @@
-package com.feminine
+package com.female.maker.oc.creator
 
 import org.junit.Assert
 import org.junit.Test

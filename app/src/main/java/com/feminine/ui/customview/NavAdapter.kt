@@ -1,16 +1,16 @@
-package com.feminine.ui.customview
+package com.female.maker.oc.creator.ui.customview
 
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.data.model.BodyPartModel
-import com.feminine.utils.onClickCustom
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.data.model.BodyPartModel
+import com.female.maker.oc.creator.utils.onClickCustom
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.feminine.R
-import com.feminine.databinding.ItemNavigationBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemNavigationBinding
 
 class NavAdapter(context: Context) : AbsBaseAdapter<BodyPartModel, ItemNavigationBinding>(R.layout.item_navigation, DiffNav()) {
     val ct= context

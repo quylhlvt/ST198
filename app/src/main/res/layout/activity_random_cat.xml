@@ -35,7 +35,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.feminine.utils.OuterStrokeTextView
+        <com.female.maker.oc.creator.utils.OuterStrokeTextView
             android:id="@+id/titleRandom"
             android:layout_width="0dp"
             android:layout_height="0dp"

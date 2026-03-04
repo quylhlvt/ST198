@@ -1,3 +1,3 @@
-package com.feminine.data.model
+package com.female.maker.oc.creator.data.model
 
 data class LanguageModel( var name: String,var code: String,var icon : Int, var active: Boolean = false)

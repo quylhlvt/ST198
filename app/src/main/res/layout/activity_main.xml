@@ -134,7 +134,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                    <com.feminine.utils.OuterStrokeTextView
+                    <com.female.maker.oc.creator.utils.OuterStrokeTextView
                         android:id="@+id/tv1"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -191,7 +191,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                    <com.feminine.utils.OuterStrokeTextView
+                    <com.female.maker.oc.creator.utils.OuterStrokeTextView
                         android:id="@+id/tv2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -248,7 +248,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
-                    <com.feminine.utils.OuterStrokeTextView
+                    <com.female.maker.oc.creator.utils.OuterStrokeTextView
                         android:id="@+id/tv3"
                         android:layout_width="0dp"
                         android:layout_height="0dp"

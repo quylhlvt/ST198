@@ -1,4 +1,4 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import android.R
 import android.app.Activity
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
-import com.feminine.utils.showSystemUI
+import com.female.maker.oc.creator.utils.showSystemUI
 
 abstract class BaseDialogFragment<B : ViewDataBinding>(var context: Activity) :
     DialogFragment() {

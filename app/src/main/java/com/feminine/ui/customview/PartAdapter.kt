@@ -1,15 +1,15 @@
-package com.feminine.ui.customview
+package com.female.maker.oc.creator.ui.customview
 
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.utils.onClickCustom
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.utils.onClickCustom
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.feminine.R
-import com.feminine.databinding.ItemPartBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemPartBinding
 
 class PartAdapter : AbsBaseAdapter<String, ItemPartBinding>(R.layout.item_part, PathDiff()) {
     var onClick: ((Int,String) -> Unit)? = null

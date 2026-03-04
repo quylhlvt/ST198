@@ -1,4 +1,4 @@
-package com.feminine.data.model
+package com.female.maker.oc.creator.data.model
 
 data class X10(
     val colorArray: String,

@@ -1,9 +1,9 @@
-package com.feminine.utils.music
+package com.female.maker.oc.creator.utils.music
 
 import android.content.Context
 import android.media.MediaPlayer
 import androidx.core.content.edit
-import com.feminine.R
+import com.female.maker.oc.creator.R
 
 object MusicLocal {
     private const val PREF_NAME = "music_preferences"

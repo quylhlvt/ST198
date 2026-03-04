@@ -1,6 +1,6 @@
-package com.feminine.data.callapi
+package com.female.maker.oc.creator.data.callapi
 
-import com.feminine.data.model.CharacterResponse
+import com.female.maker.oc.creator.data.model.CharacterResponse
 import retrofit2.http.GET
 
 interface ApiMermaid {

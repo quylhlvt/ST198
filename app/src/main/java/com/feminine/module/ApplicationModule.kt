@@ -1,10 +1,10 @@
-package com.feminine.module
+package com.female.maker.oc.creator.module
 
 import android.content.Context
-import com.feminine.data.callapi.ApiHelper
-import com.feminine.data.repository.ApiRepository
-import com.feminine.data.repository.RoomRepository
-import com.feminine.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.data.callapi.ApiHelper
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.data.repository.RoomRepository
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

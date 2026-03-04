@@ -1,4 +1,4 @@
-package com.feminine.custom.listener.listenerdraw
+package com.female.maker.oc.creator.custom.listener.listenerdraw
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -9,7 +9,7 @@ import android.media.MediaFormat
 import android.media.MediaMuxer
 import android.util.Log
 import android.view.Surface
-import com.feminine.custom.DrawView
+import com.female.maker.oc.creator.custom.DrawView
 import java.io.IOException
 
 class VideoEncoder(

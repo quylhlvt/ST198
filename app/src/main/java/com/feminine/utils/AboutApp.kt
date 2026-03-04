@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 //import okhttp3.OkHttpClient
 //import okhttp3.Request
@@ -79,12 +79,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.MutableLiveData
-import com.feminine.dialog.DialogRate
+import com.female.maker.oc.creator.dialog.DialogRate
 import com.facebook.shimmer.Shimmer
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewInfo
 import com.google.android.play.core.review.ReviewManagerFactory
-import com.feminine.R
+import com.female.maker.oc.creator.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -122,7 +122,7 @@ fun Activity.shareApp() {
 }
 
 fun Activity.policy() {
-    val url = "https://sites.google.com/view/cat-creator-meme-cat-maker/home"
+    val url = "https://sites.google.com/view/female-maker-oc-creator/home"
     val i = Intent(Intent.ACTION_VIEW)
     i.data = Uri.parse(url)
     startActivity(i)

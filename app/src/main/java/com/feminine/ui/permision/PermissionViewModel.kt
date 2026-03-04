@@ -1,8 +1,8 @@
-package com.feminine.ui.permision
+package com.female.maker.oc.creator.ui.permision
 
 import androidx.lifecycle.ViewModel
-import com.feminine.utils.PermissionHelper
-import com.feminine.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.utils.PermissionHelper
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

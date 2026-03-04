@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 sealed class SaveState {
     data class Success(val path: String) : SaveState()

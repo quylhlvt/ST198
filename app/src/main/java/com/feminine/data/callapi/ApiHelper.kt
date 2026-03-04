@@ -1,8 +1,8 @@
-package com.feminine.data.callapi
+package com.female.maker.oc.creator.data.callapi
 
 import android.annotation.SuppressLint
 import android.content.Context
-import com.feminine.utils.CONST
+import com.female.maker.oc.creator.utils.CONST
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit

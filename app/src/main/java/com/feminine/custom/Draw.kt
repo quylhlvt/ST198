@@ -1,4 +1,4 @@
-package com.feminine.custom
+package com.female.maker.oc.creator.custom
 
 import android.graphics.Canvas
 import android.graphics.Matrix
@@ -7,7 +7,7 @@ import android.graphics.RectF
 import android.graphics.drawable.Drawable
 import androidx.annotation.IntDef
 import androidx.annotation.IntRange
-import com.feminine.utils.toRect
+import com.female.maker.oc.creator.utils.toRect
 import kotlin.math.atan2
 import kotlin.math.pow
 import kotlin.math.sqrt

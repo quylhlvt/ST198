@@ -1,13 +1,13 @@
-package com.feminine.dialog
+package com.female.maker.oc.creator.dialog
 
 import android.app.Activity
 import androidx.core.content.ContextCompat
-import com.feminine.base.BaseDialog
-import com.feminine.utils.hide
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.show
-import com.feminine.R
-import com.feminine.databinding.DialogExitBinding
+import com.female.maker.oc.creator.base.BaseDialog
+import com.female.maker.oc.creator.utils.hide
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.show
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.DialogExitBinding
 
 class DialogExit(context: Activity, var type: String) :
     BaseDialog<DialogExitBinding>(context, false) {

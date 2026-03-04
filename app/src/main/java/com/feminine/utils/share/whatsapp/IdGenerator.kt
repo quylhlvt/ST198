@@ -1,10 +1,10 @@
-package com.feminine.utils.share.whatsapp
+package com.female.maker.oc.creator.utils.share.whatsapp
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.core.content.FileProvider
-import com.feminine.utils.CONST
+import com.female.maker.oc.creator.utils.CONST
 
 import java.io.File
 import java.io.FileOutputStream

@@ -1,4 +1,4 @@
-package com.feminine.ui.category
+package com.female.maker.oc.creator.ui.category
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,22 +6,22 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.util.Log
-import com.feminine.base.AbsBaseActivity
-import com.feminine.data.callapi.reponse.DataResponse
-import com.feminine.data.callapi.reponse.LoadingStatus
-import com.feminine.data.model.BodyPartModel
-import com.feminine.data.model.ColorModel
-import com.feminine.data.model.CustomModel
-import com.feminine.data.repository.ApiRepository
-import com.feminine.dialog.DialogExit
-import com.feminine.ui.customview.CustomviewActivity
-import com.feminine.utils.CONST
-import com.feminine.utils.DataHelper
-import com.feminine.utils.isInternetAvailable
-import com.feminine.utils.newIntent
-import com.feminine.utils.onSingleClick
-import com.feminine.R
-import com.feminine.databinding.ActivityCategoryBinding
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.data.callapi.reponse.DataResponse
+import com.female.maker.oc.creator.data.callapi.reponse.LoadingStatus
+import com.female.maker.oc.creator.data.model.BodyPartModel
+import com.female.maker.oc.creator.data.model.ColorModel
+import com.female.maker.oc.creator.data.model.CustomModel
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.dialog.DialogExit
+import com.female.maker.oc.creator.ui.customview.CustomviewActivity
+import com.female.maker.oc.creator.utils.CONST
+import com.female.maker.oc.creator.utils.DataHelper
+import com.female.maker.oc.creator.utils.isInternetAvailable
+import com.female.maker.oc.creator.utils.newIntent
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivityCategoryBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

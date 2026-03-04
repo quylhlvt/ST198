@@ -1,10 +1,10 @@
-package com.feminine.data.repository
+package com.female.maker.oc.creator.data.repository
 
 import android.util.Log
-import com.feminine.data.callapi.ApiHelper
-import com.feminine.data.model.CharacterResponse
-import com.feminine.utils.CONST
-import com.feminine.utils.DataHelper
+import com.female.maker.oc.creator.data.callapi.ApiHelper
+import com.female.maker.oc.creator.data.model.CharacterResponse
+import com.female.maker.oc.creator.utils.CONST
+import com.female.maker.oc.creator.utils.DataHelper
 import javax.inject.Inject
 
 class ApiRepository @Inject constructor(private val apiHelper: ApiHelper) {

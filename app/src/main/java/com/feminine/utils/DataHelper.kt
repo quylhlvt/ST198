@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 import android.content.Context
 import android.util.Log
@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.MutableLiveData
-import com.feminine.data.callapi.reponse.DataResponse
-import com.feminine.data.callapi.reponse.LoadingStatus
-import com.feminine.data.model.BodyPartModel
-import com.feminine.data.model.CharacterResponse
-import com.feminine.data.model.ColorModel
-import com.feminine.data.model.CustomModel
-import com.feminine.data.model.LanguageModel
-import com.feminine.data.model.SelectedModel
-import com.feminine.data.repository.ApiRepository
-import com.feminine.R
+import com.female.maker.oc.creator.data.callapi.reponse.DataResponse
+import com.female.maker.oc.creator.data.callapi.reponse.LoadingStatus
+import com.female.maker.oc.creator.data.model.BodyPartModel
+import com.female.maker.oc.creator.data.model.CharacterResponse
+import com.female.maker.oc.creator.data.model.ColorModel
+import com.female.maker.oc.creator.data.model.CustomModel
+import com.female.maker.oc.creator.data.model.LanguageModel
+import com.female.maker.oc.creator.data.model.SelectedModel
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async

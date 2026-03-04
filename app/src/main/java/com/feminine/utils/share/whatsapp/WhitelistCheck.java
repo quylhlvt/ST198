@@ -1,4 +1,4 @@
-package com.feminine.utils.share.whatsapp;
+package com.female.maker.oc.creator.utils.share.whatsapp;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class WhitelistCheck {
-    public static final String CONTENT_PROVIDER_AUTHORITY = "com.feminine.utils.share.whatsapp.StickerContentProvider";
+    public static final String CONTENT_PROVIDER_AUTHORITY = "com.female.maker.oc.creator.utils.share.whatsapp.StickerContentProvider";
     private static final String AUTHORITY_QUERY_PARAM = "authority";
     private static final String IDENTIFIER_QUERY_PARAM = "identifier";
     private static String STICKER_APP_AUTHORITY = CONTENT_PROVIDER_AUTHORITY;

@@ -1,14 +1,14 @@
-package com.feminine.ui.shared
+package com.female.maker.oc.creator.ui.shared
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.feminine.data.callapi.reponse.LoadingStatus
-import com.feminine.data.repository.ApiRepository
-import com.feminine.utils.DataHelper
-import com.feminine.utils.DataHelper.getData
+import com.female.maker.oc.creator.data.callapi.reponse.LoadingStatus
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.utils.DataHelper
+import com.female.maker.oc.creator.utils.DataHelper.getData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

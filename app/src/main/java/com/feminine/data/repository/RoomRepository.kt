@@ -1,9 +1,9 @@
-package com.feminine.data.repository
+package com.female.maker.oc.creator.data.repository
 
 import android.content.Context
 import android.util.Log
-import com.feminine.data.model.AvatarModel
-import com.feminine.data.room.BaseRoomDBHelper
+import com.female.maker.oc.creator.data.model.AvatarModel
+import com.female.maker.oc.creator.data.room.BaseRoomDBHelper
 
 class RoomRepository(context: Context) : BaseRoomDBHelper(context) {
 

@@ -1,20 +1,20 @@
-package com.feminine.ui.quick_mix
+package com.female.maker.oc.creator.ui.quick_mix
 
 import android.app.Activity
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.data.model.CustomModel
-import com.feminine.dialog.DialogExit
-import com.feminine.utils.DataHelper
-import com.feminine.utils.hide
-import com.feminine.utils.isInternetAvailable
-import com.feminine.utils.show
-import com.feminine.utils.showToast
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.data.model.CustomModel
+import com.female.maker.oc.creator.dialog.DialogExit
+import com.female.maker.oc.creator.utils.DataHelper
+import com.female.maker.oc.creator.utils.hide
+import com.female.maker.oc.creator.utils.isInternetAvailable
+import com.female.maker.oc.creator.utils.show
+import com.female.maker.oc.creator.utils.showToast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.feminine.R
-import com.feminine.databinding.ItemMixBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemMixBinding
 
 class QuickAdapter(private val activity: Activity) : AbsBaseAdapter<CustomModel, ItemMixBinding>(
     R.layout.item_mix, DiffCallBack()

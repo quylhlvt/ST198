@@ -1,4 +1,4 @@
-package com.feminine.ui.quick_mix
+package com.female.maker.oc.creator.ui.quick_mix
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -11,18 +11,18 @@ import android.net.ConnectivityManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseActivity
-import com.feminine.data.model.CustomModel
-import com.feminine.data.repository.ApiRepository
-import com.feminine.ui.customview.CustomviewActivity
-import com.feminine.utils.DataHelper
-import com.feminine.utils.isInternetAvailable
-import com.feminine.utils.newIntent
-import com.feminine.utils.onSingleClick
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.data.model.CustomModel
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.ui.customview.CustomviewActivity
+import com.female.maker.oc.creator.utils.DataHelper
+import com.female.maker.oc.creator.utils.isInternetAvailable
+import com.female.maker.oc.creator.utils.newIntent
+import com.female.maker.oc.creator.utils.onSingleClick
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.feminine.R
-import com.feminine.databinding.ActivityQuickMixBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivityQuickMixBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import java.util.concurrent.ConcurrentHashMap

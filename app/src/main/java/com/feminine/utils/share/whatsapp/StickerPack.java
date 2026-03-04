@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.feminine.utils.share.whatsapp;
+package com.female.maker.oc.creator.utils.share.whatsapp;
 
 import android.content.Context;
 import android.net.Uri;

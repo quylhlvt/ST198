@@ -1,9 +1,9 @@
-package com.feminine.data.room
+package com.female.maker.oc.creator.data.room
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.feminine.data.model.AvatarModel
+import com.female.maker.oc.creator.data.model.AvatarModel
 
 
 @Dao

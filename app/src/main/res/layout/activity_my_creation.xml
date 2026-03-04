@@ -39,7 +39,7 @@
                 android:gravity="center"/>
         </FrameLayout>
 
-        <com.feminine.utils.OuterStrokeTextView
+        <com.female.maker.oc.creator.utils.OuterStrokeTextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:visibility="gone"

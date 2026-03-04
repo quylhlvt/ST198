@@ -1,4 +1,4 @@
-package com.feminine.data.model
+package com.female.maker.oc.creator.data.model
 
 data class CustomModel(
     var avt: String,

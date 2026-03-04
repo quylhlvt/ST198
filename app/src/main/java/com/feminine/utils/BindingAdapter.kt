@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 
 import android.widget.TextView
@@ -8,8 +8,8 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import androidx.core.graphics.toColorInt
-import com.feminine.data.model.LanguageModel
-import com.feminine.R
+import com.female.maker.oc.creator.data.model.LanguageModel
+import com.female.maker.oc.creator.R
 import com.google.android.material.card.MaterialCardView
 
 @BindingAdapter("setBGCV")

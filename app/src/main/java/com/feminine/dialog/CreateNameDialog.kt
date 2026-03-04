@@ -1,11 +1,11 @@
-package com.feminine.dialog
+package com.female.maker.oc.creator.dialog
 
 import android.app.Activity
 import android.widget.Toast
-import com.feminine.base.BaseDialog1
-import com.feminine.utils.onClick
-import com.feminine.R
-import com.feminine.databinding.DialogCreateNameBinding
+import com.female.maker.oc.creator.base.BaseDialog1
+import com.female.maker.oc.creator.utils.onClick
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.DialogCreateNameBinding
 
 
 class CreateNameDialog(val context: Activity) :

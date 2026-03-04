@@ -1,4 +1,4 @@
-package com.feminine.ui.permision
+package com.female.maker.oc.creator.ui.permision
 
 import android.Manifest
 import android.content.Intent
@@ -8,18 +8,18 @@ import android.text.TextUtils
 import android.view.View
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
-import com.feminine.base.AbsBaseActivity
-import com.feminine.ui.main.MainActivity
-import com.feminine.utils.CONST
-import com.feminine.utils.SharedPreferenceUtils
-import com.feminine.utils.changeText
-import com.feminine.utils.checkPermision
-import com.feminine.utils.music.MusicLocal
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.showDialogNotifiListener
-import com.feminine.utils.showToast
-import com.feminine.R
-import com.feminine.databinding.ActivityPermissionBinding
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.ui.main.MainActivity
+import com.female.maker.oc.creator.utils.CONST
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.utils.changeText
+import com.female.maker.oc.creator.utils.checkPermision
+import com.female.maker.oc.creator.utils.music.MusicLocal
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.showDialogNotifiListener
+import com.female.maker.oc.creator.utils.showToast
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivityPermissionBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

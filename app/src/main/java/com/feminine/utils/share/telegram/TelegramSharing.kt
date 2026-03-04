@@ -1,4 +1,4 @@
-package com.feminine.utils.share.telegram
+package com.female.maker.oc.creator.utils.share.telegram
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -8,7 +8,7 @@ import android.net.Uri
 import android.os.Build
 import android.util.Log
 import android.widget.Toast
-import com.feminine.R
+import com.female.maker.oc.creator.R
 
 
 object TelegramSharing {

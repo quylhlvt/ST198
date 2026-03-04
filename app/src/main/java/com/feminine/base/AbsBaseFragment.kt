@@ -1,4 +1,4 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import android.app.Activity
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.feminine.utils.SystemUtils
-import com.feminine.utils.showSystemUI
+import com.female.maker.oc.creator.utils.SystemUtils
+import com.female.maker.oc.creator.utils.showSystemUI
 
 
 abstract class AbsBaseFragment <V: ViewDataBinding, G: Activity>: Fragment() {

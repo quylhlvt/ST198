@@ -1,13 +1,13 @@
-package com.feminine.dialog
+package com.female.maker.oc.creator.dialog
 
 import android.app.Activity
 import android.widget.Toast
-import com.feminine.base.BaseDialog
-import com.feminine.utils.RATE
-import com.feminine.utils.SharedPreferenceUtils
-import com.feminine.utils.onSingleClick
-import com.feminine.R
-import com.feminine.databinding.DialogRateBinding
+import com.female.maker.oc.creator.base.BaseDialog
+import com.female.maker.oc.creator.utils.RATE
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.DialogRateBinding
 
 
 class DialogRate(context: Activity) : BaseDialog<DialogRateBinding>(context, false) {

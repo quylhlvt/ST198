@@ -1,4 +1,4 @@
-package com.feminine.utils.customview
+package com.female.maker.oc.creator.utils.customview
 
 import android.content.Context
 import android.graphics.Canvas
@@ -6,7 +6,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.graphics.toColorInt
-import com.feminine.utils.DataHelper.dpToPx
+import com.female.maker.oc.creator.utils.DataHelper.dpToPx
 
 class StrokedTextView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

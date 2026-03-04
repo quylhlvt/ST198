@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 import android.content.Context
 import android.graphics.Canvas
@@ -6,7 +6,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.graphics.toColorInt
-import com.feminine.utils.DataHelper.dp
+import com.female.maker.oc.creator.utils.DataHelper.dp
 
 class StrokeTextView  @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyle: Int = 0

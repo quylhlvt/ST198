@@ -1,16 +1,16 @@
-package com.feminine.ui.category
+package com.female.maker.oc.creator.ui.category
 
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.data.model.CustomModel
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.shimmer
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.data.model.CustomModel
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.shimmer
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.facebook.shimmer.ShimmerDrawable
-import com.feminine.R
-import com.feminine.databinding.ItemCategoryBinding
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemCategoryBinding
 
 class CategoryAdapter : AbsBaseAdapter<CustomModel, ItemCategoryBinding>(
     R.layout.item_category, DiffCallBack()

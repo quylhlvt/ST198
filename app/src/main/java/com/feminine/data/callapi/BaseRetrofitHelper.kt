@@ -1,4 +1,4 @@
-package com.feminine.data.callapi
+package com.female.maker.oc.creator.data.callapi
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

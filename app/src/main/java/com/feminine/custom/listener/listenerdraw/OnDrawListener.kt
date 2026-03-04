@@ -1,7 +1,7 @@
-package com.feminine.custom.listener.listenerdraw
+package com.female.maker.oc.creator.custom.listener.listenerdraw
 
-import com.feminine.custom.Draw
-import com.feminine.custom.DrawableDraw
+import com.female.maker.oc.creator.custom.Draw
+import com.female.maker.oc.creator.custom.DrawableDraw
 
 
 interface OnDrawListener {

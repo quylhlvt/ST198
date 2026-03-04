@@ -1,4 +1,4 @@
-package com.feminine.utils
+package com.female.maker.oc.creator.utils
 
 import android.graphics.RectF
 import androidx.room.TypeConverter

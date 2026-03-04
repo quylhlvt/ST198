@@ -1,12 +1,12 @@
-package com.feminine.ui.language
+package com.female.maker.oc.creator.ui.language
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.data.model.LanguageModel
-import com.feminine.utils.DataHelper
+import com.female.maker.oc.creator.data.model.LanguageModel
+import com.female.maker.oc.creator.utils.DataHelper
 import com.bumptech.glide.Glide
-import com.feminine.databinding.ItemLanguageBinding
+import com.female.maker.oc.creator.databinding.ItemLanguageBinding
 
 class LanguageAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var onClick:((position : Int)->Unit)? = null

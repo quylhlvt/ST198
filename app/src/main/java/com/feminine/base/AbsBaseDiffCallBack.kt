@@ -1,4 +1,4 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import androidx.recyclerview.widget.DiffUtil
 

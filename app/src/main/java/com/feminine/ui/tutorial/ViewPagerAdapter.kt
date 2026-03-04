@@ -1,12 +1,12 @@
-package com.feminine.ui.tutorial
+package com.female.maker.oc.creator.ui.tutorial
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.data.model.TutorialModel
+import com.female.maker.oc.creator.data.model.TutorialModel
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.feminine.databinding.ItemTutorialBinding
+import com.female.maker.oc.creator.databinding.ItemTutorialBinding
 
 
 class ViewPagerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

@@ -1,4 +1,4 @@
-package com.feminine.ui.tutorial
+package com.female.maker.oc.creator.ui.tutorial
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,16 +10,16 @@ import android.widget.LinearLayout
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.feminine.base.AbsBaseActivity
-import com.feminine.data.model.TutorialModel
-import com.feminine.ui.main.MainActivity
-import com.feminine.ui.permision.PermissionActivity
-import com.feminine.utils.CONST
-import com.feminine.utils.SharedPreferenceUtils
-import com.feminine.utils.dpToPx
-import com.feminine.utils.music.MusicLocal
-import com.feminine.R
-import com.feminine.databinding.ActivityTutorialBinding
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.data.model.TutorialModel
+import com.female.maker.oc.creator.ui.main.MainActivity
+import com.female.maker.oc.creator.ui.permision.PermissionActivity
+import com.female.maker.oc.creator.utils.CONST
+import com.female.maker.oc.creator.utils.SharedPreferenceUtils
+import com.female.maker.oc.creator.utils.dpToPx
+import com.female.maker.oc.creator.utils.music.MusicLocal
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivityTutorialBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

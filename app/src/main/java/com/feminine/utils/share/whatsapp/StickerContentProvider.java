@@ -6,10 +6,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.feminine.utils.share.whatsapp;
+package com.female.maker.oc.creator.utils.share.whatsapp;
 
 
-import static com.feminine.utils.share.whatsapp.WhitelistCheck.CONTENT_PROVIDER_AUTHORITY;
+import static com.female.maker.oc.creator.utils.share.whatsapp.WhitelistCheck.CONTENT_PROVIDER_AUTHORITY;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

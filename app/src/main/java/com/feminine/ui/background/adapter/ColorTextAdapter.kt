@@ -1,14 +1,14 @@
-package com.feminine.ui.background.adapter
+package com.female.maker.oc.creator.ui.background.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.feminine.base.AbsBaseAdapter
-import com.feminine.base.AbsBaseDiffCallBack
-import com.feminine.data.model.SelectedModel
-import com.feminine.utils.hide
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.show
-import com.feminine.R
-import com.feminine.databinding.ItemColorEdtBinding
+import com.female.maker.oc.creator.base.AbsBaseAdapter
+import com.female.maker.oc.creator.base.AbsBaseDiffCallBack
+import com.female.maker.oc.creator.data.model.SelectedModel
+import com.female.maker.oc.creator.utils.hide
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.show
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ItemColorEdtBinding
 
 class ColorTextAdapter :
     AbsBaseAdapter<SelectedModel, ItemColorEdtBinding>(R.layout.item_color_edt, DiffCallBack()) {

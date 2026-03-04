@@ -1,4 +1,4 @@
-package com.feminine.ui.customview
+package com.female.maker.oc.creator.ui.customview
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -8,18 +8,18 @@ import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
-import com.feminine.base.AbsBaseActivity
-import com.feminine.data.model.AvatarModel
-import com.feminine.data.model.BodyPartModel
-import com.feminine.dialog.DialogExit
-import com.feminine.ui.background.BackgroundActivity
-import com.feminine.utils.DataHelper
-import com.feminine.utils.fromList
-import com.feminine.utils.isInternetAvailable
-import com.feminine.utils.onSingleClick
-import com.feminine.utils.saveBitmap
-import com.feminine.utils.showToast
-import com.feminine.utils.viewToBitmap
+import com.female.maker.oc.creator.base.AbsBaseActivity
+import com.female.maker.oc.creator.data.model.AvatarModel
+import com.female.maker.oc.creator.data.model.BodyPartModel
+import com.female.maker.oc.creator.dialog.DialogExit
+import com.female.maker.oc.creator.ui.background.BackgroundActivity
+import com.female.maker.oc.creator.utils.DataHelper
+import com.female.maker.oc.creator.utils.fromList
+import com.female.maker.oc.creator.utils.isInternetAvailable
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.utils.saveBitmap
+import com.female.maker.oc.creator.utils.showToast
+import com.female.maker.oc.creator.utils.viewToBitmap
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.DataSource
@@ -27,9 +27,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.feminine.R
-import com.feminine.databinding.ActivityCustomizeBinding
-import com.feminine.utils.DataHelper.arrBlackCentered
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.ActivityCustomizeBinding
+import com.female.maker.oc.creator.utils.DataHelper.arrBlackCentered
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CustomviewActivity : AbsBaseActivity<ActivityCustomizeBinding>() {

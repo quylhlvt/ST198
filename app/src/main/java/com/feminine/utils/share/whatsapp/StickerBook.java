@@ -1,4 +1,4 @@
-package com.feminine.utils.share.whatsapp;
+package com.female.maker.oc.creator.utils.share.whatsapp;
 
 
 import android.content.Context;

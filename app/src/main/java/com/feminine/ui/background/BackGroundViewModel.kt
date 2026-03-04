@@ -1,14 +1,14 @@
-package com.feminine.ui.background
+package com.female.maker.oc.creator.ui.background
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.view.ViewGroup
 import androidx.core.graphics.drawable.toDrawable
 import androidx.lifecycle.ViewModel
-import com.feminine.custom.Draw
-import com.feminine.custom.DrawableDraw
-import com.feminine.data.model.SelectedModel
-import com.feminine.utils.DataHelper
+import com.female.maker.oc.creator.custom.Draw
+import com.female.maker.oc.creator.custom.DrawableDraw
+import com.female.maker.oc.creator.data.model.SelectedModel
+import com.female.maker.oc.creator.utils.DataHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import java.text.SimpleDateFormat

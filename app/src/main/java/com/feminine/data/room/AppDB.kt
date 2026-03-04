@@ -1,8 +1,8 @@
-package com.feminine.data.room
+package com.female.maker.oc.creator.data.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.feminine.data.model.AvatarModel
+import com.female.maker.oc.creator.data.model.AvatarModel
 import javax.inject.Singleton
 
 @Singleton

@@ -1,16 +1,16 @@
-package com.feminine.base
+package com.female.maker.oc.creator.base
 
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.feminine.utils.SystemUtils
-import com.feminine.utils.music.MusicLocal
-import com.feminine.utils.showSystemUI
-import com.feminine.R
-import com.feminine.data.repository.ApiRepository
-import com.feminine.utils.DataHelper
+import com.female.maker.oc.creator.utils.SystemUtils
+import com.female.maker.oc.creator.utils.music.MusicLocal
+import com.female.maker.oc.creator.utils.showSystemUI
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.data.repository.ApiRepository
+import com.female.maker.oc.creator.utils.DataHelper
 import javax.inject.Inject
 
 abstract class AbsBaseActivity<V : ViewDataBinding> : AppCompatActivity() {

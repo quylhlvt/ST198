@@ -1,11 +1,11 @@
-package com.feminine.dialog
+package com.female.maker.oc.creator.dialog
 
 import android.app.Activity
 import android.graphics.Color
-import com.feminine.base.BaseDialog
-import com.feminine.utils.onSingleClick
-import com.feminine.R
-import com.feminine.databinding.DialogColorPickerBinding
+import com.female.maker.oc.creator.base.BaseDialog
+import com.female.maker.oc.creator.utils.onSingleClick
+import com.female.maker.oc.creator.R
+import com.female.maker.oc.creator.databinding.DialogColorPickerBinding
 
 
 class ChooseColorDialog(context: Activity) : BaseDialog<DialogColorPickerBinding>(context, false) {
