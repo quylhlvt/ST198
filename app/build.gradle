@@ -18,7 +18,7 @@ android {
         versionCode 1
         versionName "1.0.0"
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "Female_Maker_OC_Creator_${versionName}_${formattedDate}"
+        archivesBaseName = "Feminine_Maker_OC_Creator_${versionName}_${formattedDate}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

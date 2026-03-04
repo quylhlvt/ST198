@@ -39,5 +39,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Female Maker OC Creator"
+rootProject.name = "Feminine Maker OC Creator"
 include ':app'
