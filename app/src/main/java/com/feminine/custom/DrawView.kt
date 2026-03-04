@@ -709,8 +709,7 @@ open class DrawView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
         icon.y = y
         icon.getMatrix().reset()
         // Thu nhỏ icon xuống 39dp
-
-        val targetSizePx = dpToPx(32)
+        val targetSizePx = dpToPx(25)
         val scaleX = targetSizePx / icon.width
         val scaleY = targetSizePx / icon.height
         val scale = minOf(scaleX, scaleY) // Giữ tỷ lệ aspect ratio

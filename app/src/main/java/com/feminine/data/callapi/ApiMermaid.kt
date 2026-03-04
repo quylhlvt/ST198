@@ -4,6 +4,6 @@ import com.feminine.data.model.CharacterResponse
 import retrofit2.http.GET
 
 interface ApiMermaid {
-    @GET("api/ST214_AvatarProfileMaker")
+    @GET("api/ST198_FeminineMaker")
     suspend fun getAllData(): CharacterResponse
 }

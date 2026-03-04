@@ -67,9 +67,9 @@
     <string name="privacy_amp_policy"><![CDATA[PRIVACIDADE & POLÍTICA]]></string>
     <string name="please_check_your_network_connection">Por favor, verifique sua conexão com a internet</string>
     <string name="reset_your_customize">Redefinir</string>
-    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Deseja sair?</string>
+    <string name="haven_t_saved_it_yet_do_you_want_to_exit">O personagem não foi salvo. Você ainda deseja sair?</string>
     <string name="do_you_want_to_delete_this_item">Deseja excluir?</string>
-    <string name="please_wait_a_few_seconds_for_data_to_load">Por favor, aguarde alguns segundos para carregar os dados.</string>
+    <string name="please_wait_a_few_seconds_for_data_to_load">Por favor aguarde um momento</string>
     <string name="image">IMAGEM</string>
     <string name="color">COR</string>
     <string name="color2">Cor</string>

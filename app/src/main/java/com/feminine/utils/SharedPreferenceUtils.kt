@@ -12,6 +12,7 @@ import javax.inject.Singleton
 class SharedPreferenceUtils @Inject constructor(context: Context) {
     private val MYAPPLICATION = "MY_APPLICATION"
     private val STORAGE_KEY = "STORAGE_KEY"
+    private val STORAGE_KEY1 = "STORAGE_KEY1"
     private val NOTIFICATION_KEY = "NOTIFICATION_KEY"
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences(MYAPPLICATION, Context.MODE_PRIVATE)
@@ -23,6 +24,15 @@ class SharedPreferenceUtils @Inject constructor(context: Context) {
     fun setStoragePermission(count: Int) {
         val editor = sharedPreferences.edit()
         editor.putInt(STORAGE_KEY, count)
+        editor.apply()
+    }
+    fun getStoragePermission1(): Int {
+        return sharedPreferences.getInt(STORAGE_KEY1, 0)
+    }
+
+    fun setStoragePermission1(count: Int) {
+        val editor = sharedPreferences.edit()
+        editor.putInt(STORAGE_KEY1, count)
         editor.apply()
     }
 

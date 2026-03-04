@@ -68,9 +68,9 @@
     <string name="privacy_amp_policy"><![CDATA[DATENSCHUTZ & RICHTLINIE]]></string>
     <string name="please_check_your_network_connection">Bitte überprüfe deine Internetverbindung</string>
     <string name="reset_your_customize">Zurücksetzen</string>
-    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Möchtest du beenden?</string>
+    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Der Charakter wurde nicht gespeichert. Möchten Sie trotzdem beenden?</string>
     <string name="do_you_want_to_delete_this_item">Möchtest du löschen?</string>
-    <string name="please_wait_a_few_seconds_for_data_to_load">Bitte warte kurz, bis die Daten geladen sind.</string>
+    <string name="please_wait_a_few_seconds_for_data_to_load">Bitte warten Sie einen Moment</string>
     <string name="image">BILD</string>
     <string name="color">FARBE</string>
     <string name="color2">Farbe</string>

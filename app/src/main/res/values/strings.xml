@@ -21,7 +21,7 @@
     <string name="create">CREATE</string>
     <string name="customize">CUSTOMIZE</string>
     <string name="save">SAVE</string>
-    <string name="wait_a_few_second">Wait a minute</string>
+    <string name="wait_a_few_second">Please wait a moment</string>
     <string name="tv_cancel">Cancel</string>
     <string name="successfully">Successfully</string>
     <string name="successfully2">SUCCESSFULLY</string>
@@ -66,7 +66,7 @@
     <string name="privacy_amp_policy"><![CDATA[PRIVACY & POLICY]]></string>
     <string name="please_check_your_network_connection">Please check your internet</string>
     <string name="reset_your_customize">Reset</string>
-    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Do you want to exit?</string>
+    <string name="haven_t_saved_it_yet_do_you_want_to_exit">The character hasn\'t been saved, can you still exit?</string>
     <string name="do_you_want_to_delete_this_item">Do you want to delete?</string>
     <string name="please_wait_a_few_seconds_for_data_to_load">Please wait a few seconds for data to load.</string>
     <string name="image">IMAGE</string>
@@ -95,7 +95,7 @@
     <string name="create_package_name">Create Package Name</string>
     <string name="enter_your_package_name">Enter your package name</string>
     <string name="please_enter_your_package_name">Please enter your package name!</string>
-    <string name="loading">Loading</string>
+    <string name="loading">Loading...</string>
     <string name="edit">Edit</string>
     <string name="no_internet">No internet</string>
     <string name="ok">OK</string>

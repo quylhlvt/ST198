@@ -15,7 +15,7 @@ object CONST {
     val BASE_URL_2 = "https://lvtglobal.site/"
     val BASE_URL_1 = "https://lvtglobal.tech/"
     var BASE_URL = ""
-    var BASE_CONNECT = "public/app/ST214_AvatarProfileMaker/"
+    var BASE_CONNECT = "public/app/ST198_FeminineMaker/"
     const val RANDOM_IDENTIFIER_FOR_ADDING_STICKER_TO_WHATSAPP =
         "RANDOM_IDENTIFIER_FOR_WHATSAPP_STICKER"
 

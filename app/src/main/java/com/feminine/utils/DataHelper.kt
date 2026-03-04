@@ -397,12 +397,7 @@ object DataHelper {
                     R.color.color_9
                 )
             ),
-            SelectedModel(
-                color = ContextCompat.getColor(
-                    context,
-                    R.color.white
-                )
-            ),
+
             SelectedModel(
                 color = ContextCompat.getColor(
                     context,

@@ -74,7 +74,7 @@ class CategoryActivity : AbsBaseActivity<ActivityCategoryBinding>() {
         // Observe data online
         observeDataOnline()
 
-        if (DataHelper.arrBlackCentered.size <= 3 && !isInternetAvailable(this@CategoryActivity)) {
+        if (DataHelper.arrBlackCentered.size <= 2 && !isInternetAvailable(this@CategoryActivity)) {
             DialogExit(
                 this@CategoryActivity,
                 "awaitdataHome"

@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.os.Build
 import android.widget.Toast
@@ -34,6 +35,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.feminine.R
 import com.feminine.databinding.ActivityViewBinding
+import com.feminine.utils.SharedPreferenceUtils
+import com.feminine.utils.showDialogNotifiListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -44,6 +47,8 @@ import javax.inject.Inject
 class ViewActivity : AbsBaseActivity<ActivityViewBinding>() {
     @Inject
     lateinit var apiRepository: ApiRepository
+    @Inject
+    lateinit var sharedPreferenceUtils: SharedPreferenceUtils
     var checkCallingDataOnline = false
     val viewModel: CustomviewViewModel by viewModels()
     var path = ""
@@ -253,11 +258,17 @@ class ViewActivity : AbsBaseActivity<ActivityViewBinding>() {
                 if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q &&
                     !checkPermision(application)
                 ) {
-                    ActivityCompat.requestPermissions(
-                        this@ViewActivity,
-                        checkUsePermision(),
-                        CONST.REQUEST_STORAGE_PERMISSION
-                    )
+
+                    val deniedCount = sharedPreferenceUtils.getStoragePermission1()
+                    if (deniedCount >= 2) {
+                        showDialogNotifiListener(R.string.reques_storage)
+                    } else {
+                        ActivityCompat.requestPermissions(
+                            this@ViewActivity,
+                            checkUsePermision(),
+                            CONST.REQUEST_STORAGE_PERMISSION
+                        )
+                    }
                 } else {
                     saveFileToExternalStorage(
                         applicationContext,
@@ -349,31 +360,30 @@ class ViewActivity : AbsBaseActivity<ActivityViewBinding>() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when (requesPermission(requestCode)) {
-            CONST.REQUEST_STORAGE_PERMISSION -> {
-                saveFileToExternalStorage(
-                    applicationContext,
-                    path,
-                    "",
-                ) { check, path ->
+
+        // Bỏ requesPermission() wrapper, dùng trực tiếp requestCode
+        if (requestCode == CONST.REQUEST_STORAGE_PERMISSION) {
+            val isGranted = grantResults.isNotEmpty() &&
+                    grantResults.all { it == PackageManager.PERMISSION_GRANTED }
+
+            val currentCount = sharedPreferenceUtils.getStoragePermission1()
+            sharedPreferenceUtils.setStoragePermission1(
+                if (isGranted) 0 else currentCount + 1
+            )
+
+            if (isGranted) {
+                saveFileToExternalStorage(applicationContext, path, "") { check, savedPath ->
                     if (check) {
                         Toast.makeText(
                             applicationContext,
                             getString(R.string.download_successfully) + " " + CONST.NAME_SAVE_FILE,
                             Toast.LENGTH_SHORT
                         ).show()
-                        scanMediaFile(
-                            this@ViewActivity,
-                            File(path)
-                        )
+                        scanMediaFile(this@ViewActivity, File(savedPath))
                     } else {
-                        showToast(
-                            this@ViewActivity,
-                            R.string.download_failed
-                        )
+                        showToast(this@ViewActivity, R.string.download_failed)
                     }
                 }
             }
         }
-    }
-}
+    }}

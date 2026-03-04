@@ -320,6 +320,7 @@ class MyCreationActivity : WhatsappSharingActivity<ActivityMyCreationBinding>() 
             txtTelegram.isSelected = true
             txtWhatsapp.isSelected = true
             tvDownload.isSelected = true
+            tvShare.isSelected = true
 
             rcvAvatar.itemAnimator = null
             rcvAvatar.adapter = adapterAvatar

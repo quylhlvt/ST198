@@ -364,7 +364,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                                     false
                                 viewModel.textColorList[1].isSelected = true
                                 adapterColorText.posSelect = 1
-                                iclText.edt.setTextColor("#FFFFFF".toColorInt())
+                                iclText.edt.setTextColor("#FFA843".toColorInt())
                                 adapterColorText.submitList(viewModel.textColorList)
 
                                 if (adapterFont.posSelect > 0) {
@@ -579,7 +579,7 @@ class BackgroundActivity : AbsBaseActivity<ActivityBackgroundBinding>() {
                     viewModel.textColorList[adapterColorText.posSelect].isSelected = false
                     viewModel.textColorList[1].isSelected = true
                     adapterColorText.posSelect = 1
-                    iclText.edt.setTextColor("#FFFFFF".toColorInt())
+                    iclText.edt.setTextColor("#FFA843".toColorInt())
                     adapterColorText.submitList(viewModel.textColorList)
 
                     if (adapterFont.posSelect > 0) {

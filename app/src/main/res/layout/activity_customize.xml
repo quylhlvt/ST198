@@ -276,7 +276,7 @@
         </LinearLayout>
         <LinearLayout
             android:visibility="gone"
-            android:elevation="4dp"
+            android:elevation="5dp"
             android:id="@+id/llLoading"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -292,13 +292,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/titleFame"
                     android:layout_width="0dp"
-                    android:layout_height="38dp"
+                    android:layout_height="40dp"
                     android:layout_marginBottom="-20dp"
-
+                    app:cardBackgroundColor="@color/transparent"
                     app:cardElevation="8dp"
                     app:strokeWidth="0dp"
+                    android:textAllCaps="true"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-                    app:layout_constraintDimensionRatio="0.98:0.38"
+                    app:layout_constraintDimensionRatio="1.56:0.4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
                     <FrameLayout
@@ -316,6 +317,7 @@
                             android:fontFamily="@font/cookies_regular"
                             android:gravity="center"
                             android:text="@string/loading"
+                            android:textAllCaps="true"
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             app:strokeJoinStyle="miter" />
@@ -327,7 +329,7 @@
                     android:layout_height="0dp"
                     android:layout_marginHorizontal="42dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="2.76:1.28"
+                    app:layout_constraintDimensionRatio="3.12:1.4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -340,40 +342,43 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
-<!--                        <ImageView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_marginHorizontal="15dp"-->
-<!--                            android:layout_marginVertical="12dp"-->
-<!--                            android:id="@+id/imgInLoading"-->
-<!--                            android:src="@drawable/img_in_loading"/>-->
+                        <!--                        <ImageView-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:layout_marginHorizontal="15dp"-->
+                        <!--                            android:layout_marginVertical="12dp"-->
+                        <!--                            android:id="@+id/imgInLoading"-->
+                        <!--                            android:src="@drawable/img_in_loading"/>-->
 
                         <TextView
                             android:id="@+id/txtContent"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
-                            android:fontFamily="@font/cookies_regular"
+                            android:fontFamily="@font/cherry_bomb_regular"
                             android:gravity="center"
                             android:text="@string/wait_a_few_second"
+                            android:textAllCaps="true"
                             android:textColor="@color/white"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="20dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            />
 
-<!--                        <com.airbnb.lottie.LottieAnimationView-->
-<!--                            android:id="@+id/animationView"-->
-<!--                            android:layout_width="100dp"-->
-<!--                            android:layout_height="100dp"-->
-<!--                            android:layout_marginTop="-20dp"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toBottomOf="@+id/txtContent"-->
-<!--                            app:lottie_autoPlay="true"-->
-<!--                            app:lottie_loop="true"-->
-<!--                            app:lottie_rawRes="@raw/json_loading" />-->
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animationView"
+                            android:layout_width="300dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintBottom_toTopOf="@+id/txtContent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/loading_custom" />
                         <TextView
                             android:id="@+id/btnNo"
                             android:layout_width="0dp"
