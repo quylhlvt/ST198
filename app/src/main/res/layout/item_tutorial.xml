@@ -7,7 +7,7 @@
 
         <variable
             name="mTutorialModel"
-            type="com.avatar.ocmaker.profile.data.model.TutorialModel" />
+            type="com.female.maker.oc.creator.data.model.TutorialModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +25,7 @@
             android:adjustViewBounds="true"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:layout_marginBottom="9dp"
+
             app:layout_constraintBottom_toTopOf="@+id/tv1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginHorizontal="14dp"
-            android:fontFamily="@font/cherry_bomb_regular"
+            android:fontFamily="@font/spacegrotesk_bold"
             android:gravity="center"
             android:text="@{mTutorialModel.title}"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:freezesText="true"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"

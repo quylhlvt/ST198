@@ -14,7 +14,7 @@
             android:id="@+id/imgstroker"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="8dp"
+            android:layout_margin="4dp"
             app:strokeColor="@color/app_color4"
             app:cardCornerRadius="16dp"
             app:strokeWidth="16dp"
@@ -38,7 +38,6 @@
             app:layout_constraintTop_toTopOf="@+id/imgstroker"
             app:strokeColor="@color/app_color5"
             app:strokeWidth="2dp">
-
         <!--            imvImage-->
                 <ImageView
                     android:id="@+id/imvImage"
@@ -49,11 +48,11 @@
 
                 <ImageView
                     android:id="@+id/btnDelete"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="end"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="14dp"
                     android:src="@drawable/imv_delete" />
 
                 <!--        btnSelect-->
@@ -62,8 +61,8 @@
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_gravity="end"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginEnd="14dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="8dp"
                     android:src="@drawable/imv_check_false"
                     android:visibility="gone" />
         </com.google.android.material.card.MaterialCardView>

@@ -53,12 +53,11 @@
                     android:id="@+id/txtNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:fontFamily="@font/spacegrotesk_regular"
                     android:gravity="center"
-                    android:paddingHorizontal="16dp"
                     android:paddingVertical="6dp"
-                    android:text="@string/next"
-                    android:textColor="@color/app_color"
+                    android:text="@string/next1"
+                    android:textColor="@color/white"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -77,12 +76,12 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="@font/roboto_medium"
+                        android:fontFamily="@font/spacegrotesk_regular"
                         android:gravity="center"
                         android:paddingHorizontal="50dp"
                         android:text="@string/next"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="17sp" />
 
                 </com.google.android.material.card.MaterialCardView>
             </androidx.constraintlayout.widget.ConstraintLayout>

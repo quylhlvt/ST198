@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardBackgroundColor="@color/transparent"
-                app:cardCornerRadius="4dp"
+                app:cardCornerRadius="1000dp"
                 app:strokeColor="@color/gray_stroker_custom"
                 app:strokeWidth="0.5dp"
                 app:cardElevation="0dp">
@@ -45,7 +45,7 @@
                 android:layout_height="match_parent"
                 app:strokeWidth="2dp"
                 app:cardBackgroundColor="@color/transparent"
-                app:cardCornerRadius="4dp"
+                app:cardCornerRadius="1000dp"
                 app:strokeColor="@color/app_color"
                 />
         </FrameLayout>

@@ -11,11 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp">
-
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/bg"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
 
             android:src="@color/_1f2f4f"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -13,12 +13,11 @@
         android:background="@drawable/img_frame_bg_layer_bg">
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/titleBg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/crimson_text_bold"
+            android:fontFamily="@font/spacegrotesk_bold"
             android:text="@string/background"
             android:textColor="@color/app_color"
             android:textSize="18sp"
@@ -26,12 +25,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/llTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="9dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/titleBg">
 
@@ -41,8 +39,9 @@
                 android:layout_height="32dp"
                 android:layout_marginHorizontal="4dp"
                 android:layout_weight="1"
+                android:textSize="14sp"
                 android:background="@drawable/bg_custom_choose"
-                android:fontFamily="@font/crimson_text_bold"
+                android:fontFamily="@font/spacegrotesk_bold"
                 android:gravity="center"
                 android:text="@string/image"
                 android:textColor="@color/white" />
@@ -53,22 +52,23 @@
                 android:layout_height="32dp"
                 android:layout_marginHorizontal="4dp"
                 android:layout_weight="1"
+                android:textSize="14sp"
                 android:background="@drawable/bg_custom_unchoose"
-                android:fontFamily="@font/crimson_text_bold"
+                android:fontFamily="@font/spacegrotesk_bold"
                 android:gravity="center"
                 android:text="@string/color"
-                android:textColor="@color/app_color" />
+                android:textColor="@color/app_color6" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvImage"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/llTop"
-            tools:itemCount="30"
+            tools:itemCount="3"
             tools:listitem="@layout/item_image"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
@@ -77,11 +77,11 @@
             android:id="@+id/rcvColor"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/llTop"
-            tools:itemCount="20"
+            tools:itemCount="2"
             android:visibility="gone"
 
             tools:listitem="@layout/item_color_bg"

@@ -10,36 +10,36 @@
     android:layout_width="match_parent"
     android:background="@drawable/img_frame_bg_layer_bg"
     android:layout_height="match_parent">
-<!--    <TextView-->
-<!--        android:id="@+id/titleBg"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:fontFamily="@font/rufing_personaluse"-->
-<!--        android:text="@string/text"-->
-<!--        android:textColor="@color/app_color2"-->
-<!--        android:textSize="16sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/titleBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/spacegrotesk_bold"
+        android:text="@string/input_text"
+        android:textColor="@color/app_color6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imvTick"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="22dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/imv_tick"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/imvTick">
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleBg">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -50,12 +50,13 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:fontFamily="@font/cherry_bomb_regular"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/spacegrotesk_bold"
                 android:text="@string/text"
-                android:textColor="@color/app_color6"
-                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/app_color8"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,7 +76,7 @@
                 android:paddingStart="14dp"
                 android:paddingEnd="6dp"
                 android:singleLine="true"
-                android:textColor="@color/white"
+                android:textColor="@color/_ffa843"
                 android:textColorHint="#80868686"
                 android:textSize="14sp"
                 app:layout_constraintTop_toBottomOf="@id/tv" />
@@ -84,12 +85,12 @@
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/cherry_bomb_regular"
+                android:fontFamily="@font/spacegrotesk_bold"
                 android:text="@string/font"
-                android:textColor="@color/app_color6"
-                android:textSize="18sp"
+                android:textColor="@color/app_color8"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edt" />
 
@@ -100,7 +101,7 @@
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
                 android:orientation="horizontal"
-                android:paddingStart="14dp"
+                android:paddingStart="16dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/tv1"
                 tools:itemCount="10"
@@ -110,12 +111,12 @@
                 android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/cherry_bomb_regular"
+                android:fontFamily="@font/spacegrotesk_bold"
                 android:text="@string/color2"
-                android:textColor="@color/app_color6"
-                android:textSize="18sp"
+                android:textColor="@color/app_color8"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rcvFont" />
 
